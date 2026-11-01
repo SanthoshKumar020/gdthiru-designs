@@ -32,9 +32,9 @@ export default function Design2() {
         </div>
       </section>
 
-      <Marquee className="bg-[#1d4ed8] py-3.5 text-white [--duration:30s] [--gap:2.5rem]">
+      <Marquee className="bg-[#1d4ed8] py-3.5 text-white">
         {[...practiceAreas, ...usAreas].map((a) => (
-          <span key={a.title} className="whitespace-nowrap font-semibold">
+          <span key={a.title} className="whitespace-nowrap font-semibold pr-10">
             {a.title} ✦
           </span>
         ))}

@@ -7,12 +7,12 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @theme {
-  --animate-marquee: marquee var(--duration) linear infinite;
+  --animate-marquee: marquee 30s linear infinite;
   --animate-pulsating: pulsating 1.5s ease-out infinite;
 
   @keyframes marquee {
     to {
-      transform: translateX(calc(-100% - var(--gap)));
+      transform: translateX(-100%);
     }
   }
 
