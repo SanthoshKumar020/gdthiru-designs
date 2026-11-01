@@ -475,12 +475,39 @@
   display: none;
 }
 
-/* v7: flight journey band + mobile header fixes */
-.journey {
-  background: #eff6ff;
-  color: #1e40af;
-  padding: 44px 5vw;
+/* v9: 21st.dev-style marquee of visa routes */
+.marquee {
+  overflow: hidden;
+  background: #1d4ed8;
+  color: #fff;
+  padding: 14px 0;
 }
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  font-weight: 600;
+  animation: marqueeScroll 30s linear infinite;
+}
+.marqueeTrack span {
+  padding-right: 40px;
+  white-space: nowrap;
+}
+.marquee:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+@keyframes marqueeScroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+  }
+}
+
+/* v7: mobile header fixes */
+
 .logo {
   white-space: nowrap;
 }

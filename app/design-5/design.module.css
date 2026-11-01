@@ -426,14 +426,31 @@
   display: none;
 }
 
-/* v7: flight journey band + mobile header fixes */
-.journey {
-  background: #faf9f6;
-  color: #1a1a1a;
-  padding: 44px 5vw;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+/* v9: 21st.dev-style editorial drop cap + pull-quote mark */
+.standfirst::first-letter {
+  font-size: 62px;
+  float: left;
+  line-height: 0.85;
+  padding-right: 12px;
+  padding-top: 4px;
+  font-weight: bold;
 }
+.quotes blockquote {
+  position: relative;
+  padding-top: 30px;
+}
+.quotes blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  font-size: 64px;
+  line-height: 1;
+  color: #ccc;
+}
+
+/* v7: mobile header fixes */
+
 .brand {
   white-space: nowrap;
 }

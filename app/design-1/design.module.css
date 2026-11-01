@@ -469,15 +469,33 @@
   display: none;
 }
 
-/* v7: flight journey band + mobile header fixes */
-.journey {
-  background: #f7f3e8;
-  color: #0f2a4a;
-  padding: 44px 5vw;
+/* v9: 21st.dev-style shine border on the consultation panel */
+.cta {
+  position: relative;
+  overflow: hidden;
 }
-.journey svg text {
-  font-family: Georgia, "Times New Roman", serif;
+.cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-150%) skewX(-15deg);
+  animation: ctaShine 4.5s ease-in-out infinite;
+  pointer-events: none;
 }
+@keyframes ctaShine {
+  0%, 55% {
+    transform: translateX(-150%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(350%) skewX(-15deg);
+  }
+}
+
+/* v7: mobile header fixes */
+
 .brand strong,
 .brand small {
   white-space: nowrap;
