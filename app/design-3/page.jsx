@@ -44,7 +44,7 @@ export default function Design3() {
               className={
                 i === 0
                   ? "md:col-span-2 md:row-span-2 border-[#2a2d33] bg-[#121417] text-white"
-                  : "border-[#2a2d33] bg-[#121417] text-white"
+                  : "md:col-span-1 border-[#2a2d33] bg-[#121417] text-white"
               }
             />
           ))}

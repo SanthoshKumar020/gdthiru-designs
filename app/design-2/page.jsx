@@ -32,7 +32,7 @@ export default function Design2() {
         </div>
       </section>
 
-      <Marquee pauseOnHover className="bg-[#1d4ed8] py-3.5 text-white [--duration:30s] [--gap:2.5rem]">
+      <Marquee className="bg-[#1d4ed8] py-3.5 text-white [--duration:30s] [--gap:2.5rem]">
         {[...practiceAreas, ...usAreas].map((a) => (
           <span key={a.title} className="whitespace-nowrap font-semibold">
             {a.title} ✦
