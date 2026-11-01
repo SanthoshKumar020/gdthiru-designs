@@ -1,6 +1,7 @@
 import ScrollAnimations from "./components/ScrollAnimations";
 import "./tailwind.css";
 import "./reveal.css";
+import "./components/site-shared.css";
 
 export const metadata = {
   title: "GD Thiru & Co. — Website Designs",

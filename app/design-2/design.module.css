@@ -558,3 +558,38 @@
     font-size: 30px;
   }
 }
+
+/* v11: steps breakpoints + testimonial feature */
+@media (max-width: 1023px) {
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+.quoteFeature {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 32px;
+  align-items: center;
+}
+.quoteImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 16px;
+}
+@media (max-width: 767px) {
+  .quoteFeature {
+    grid-template-columns: 1fr;
+  }
+  .quoteImg img {
+    aspect-ratio: 16 / 9;
+  }
+}

@@ -62,4 +62,12 @@ html.js-scroll section.inview {
   .heroImgAnim {
     animation: none;
   }
+  .heroTextAnim,
+  .animate-marquee,
+  .animate-pulsating {
+    animation: none;
+  }
+  .imgHover img {
+    transition: none;
+  }
 }

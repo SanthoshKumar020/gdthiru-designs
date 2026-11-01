@@ -84,14 +84,216 @@ export const destinations = [
   { img: "supremeCourt", place: "Washington, D.C.", note: "U.S. Supreme Court — the law of the land", maps: "https://www.google.com/maps/search/?api=1&query=Washington+DC+USA" },
 ];
 
-export const practiceDetail = {
-  "Appeals & Judicial Review": "If a visa is refused or a decision is unlawful, the firm challenges it — through an appeal where a right of appeal exists, and judicial review where it does not. Every refusal is reviewed on its own merits before advice is given.",
-  "Skilled Worker Visa": "The UK Skilled Worker route lets you work for a licensed UK sponsor in an eligible job. We check your job, salary and sponsor licence, then prepare the application and supporting evidence so nothing is left to chance.",
-  "Innovator Founder Visa": "For entrepreneurs with an innovative, viable and scalable business idea. The idea must be endorsed by an approved endorsing body — we help you shape the business plan and endorsement case before anything is filed.",
-  "Student Visa": "Study at a licensed UK institution with a Confirmation of Acceptance for Studies. We cover the application, finances evidence, and dependant and post-study options in plain language.",
-  "Settlement & Family Visas": "Settlement and family routes are personal and stressful — we keep you informed at every step and build a file that answers questions before they are asked.",
-  "British Citizenship & Ancestry": "From naturalisation and registration as a British citizen to Ancestry visas and Right of Abode claims, we map the route, the evidence and the timeline from day one.",
-};
+export const routeSections = [
+  {
+    slug: "appeals",
+    group: "UK",
+    code: "Appeals",
+    title: "Appeals",
+    answer: "If the Home Office refuses your case and you have a right of appeal, the First-tier Tribunal can overturn the decision — but only on the grounds the law allows, and deadlines are strict.",
+    detail: [
+      "Under section 82(1) of the Nationality, Immigration and Asylum Act 2002, an appeal may be brought on the grounds in section 84: that the decision is not in accordance with the Immigration Rules, is unlawful discrimination under the Equality Act 2010, breaches the Human Rights Act 1998, or that a discretion in the Rules should have been exercised differently — or that removal would breach the UK's obligations under the Refugee Convention or the appellant's Convention rights.",
+      "Under section 86, the tribunal must decide every ground raised. If it fails to do so, that can be an error of law and the basis for an onward appeal. The tribunal allows the appeal if the decision was not in line with the law or discretion should have been exercised differently; otherwise it must dismiss it.",
+    ],
+    points: [
+      "Appeal grounds include: not in accordance with the Immigration Rules; unlawful discrimination; Human Rights Act breach; discretion exercised wrongly; removal breaching Refugee Convention rights.",
+      "We review every refusal on its merits first — sometimes a fresh application is stronger than an appeal.",
+      "Act immediately after a refusal: appeal deadlines are strict and missing one can end the case.",
+    ],
+  },
+  {
+    slug: "judicial-review",
+    group: "UK",
+    code: "Judicial Review",
+    title: "Judicial Review",
+    answer: "When there is no right of appeal, or all appeals are exhausted, the High Court or Upper Tribunal can review whether a public body's decision was lawful.",
+    detail: [
+      "Judicial review challenges the lawfulness of a decision, action or failure to act by a public body or government department. It can also challenge secondary legislation, the Immigration Rules or policy, and the compatibility of an Act of Parliament with Convention rights.",
+      "It is different from an appeal: the court does not normally substitute what it thinks is the 'correct' decision — it decides only whether the decision made was lawful. Judicial review is not a statutory right of appeal and is only likely to proceed when appeal routes are exhausted or none exists.",
+    ],
+    points: [
+      "Use it when there is no appeal, or every appeal has been exhausted.",
+      "The question is lawfulness, not whether the judge would have decided differently.",
+      "We check first whether an appeal exists — judicial review is the last resort, not the first step.",
+    ],
+  },
+  {
+    slug: "skilled-worker",
+    group: "UK",
+    code: "Work",
+    title: "Skilled Worker Visa",
+    answer: "Work in the UK for an employer licensed by the Home Office, in an eligible skilled job, with a certificate of sponsorship.",
+    detail: [
+      "This route replaced Tier 2 General and Intra-Company Transfer. You need a skilled job offer from a licensed sponsor, a certificate of sponsorship, and you must meet the skill, salary and English language requirements for the role.",
+      "We check the sponsor licence, the job and the salary first, then prepare the application and evidence so nothing is left to chance. The route can lead to settlement after five years.",
+    ],
+    points: [
+      "Licensed sponsor and certificate of sponsorship required.",
+      "Job, salary and English requirements checked before filing.",
+      "Dependants can usually come with you; settlement is possible after five years.",
+    ],
+  },
+  {
+    slug: "innovator-founder",
+    group: "UK",
+    code: "Founder",
+    title: "Innovator Founder Visa",
+    answer: "For entrepreneurs with an innovative, viable and scalable business idea, endorsed by an approved endorsing body.",
+    detail: [
+      "The idea must be innovative, viable and scalable, and endorsed before you apply. We help you shape the business plan and the endorsement case first, so the application stands on a strong endorsement.",
+      "This is the current entrepreneur route: the former Tier 1 Entrepreneur and Investor routes are closed. You must be actively involved in running the business.",
+    ],
+    points: [
+      "Endorsement comes first — the business idea must be innovative, viable and scalable.",
+      "A credible business plan is part of the endorsement case.",
+      "You must be actively involved in the business, not a passive investor.",
+    ],
+  },
+  {
+    slug: "student",
+    group: "UK",
+    code: "Student",
+    title: "Student Visa",
+    answer: "Study at a licensed UK institution with a Confirmation of Acceptance for Studies (CAS).",
+    detail: [
+      "This route replaced Tier 4. You must be a genuine student with a valid CAS, meet the English language requirement, and show you can maintain yourself financially. Some postgraduate subjects also need ATAS clearance.",
+      "We cover the application, the finances evidence, and dependant and post-study options in plain language, so you know exactly what the Home Office will ask for.",
+    ],
+    points: [
+      "Valid CAS from a licensed sponsor institution.",
+      "Genuine student test, English requirement and maintenance funds.",
+      "ATAS clearance for relevant postgraduate subjects.",
+      "Dependant and post-study options explained before you apply.",
+    ],
+  },
+  {
+    slug: "settlement-family",
+    group: "UK",
+    code: "Family",
+    title: "Settlement & Family Visas",
+    answer: "Join and settle with family in the UK — most commonly as a partner or parent, on the five-year route to settlement under Appendix FM.",
+    detail: [
+      "This covers entry clearance, leave to remain, further leave and indefinite leave to remain for partners — fiancé(e), spouse, civil partner, unmarried or same-sex partner of a British citizen or settled person — and for parents of a British or settled child living in the UK.",
+      "Applications turn on a genuine relationship, financial requirements and English language. We build the file around the evidence the Home Office actually weighs, and we also advise on long-residence cases.",
+    ],
+    points: [
+      "Five-year partner and parent routes under Appendix FM.",
+      "Genuine relationship, financial and English requirements.",
+      "Bereaved partners and parents of British or settled children included.",
+      "Long-residence settlement where it applies.",
+    ],
+  },
+  {
+    slug: "citizenship-ancestry",
+    group: "UK",
+    code: "Citizenship",
+    title: "British Citizenship & Ancestry",
+    answer: "Naturalisation as a British citizen, Ancestry visas for Commonwealth citizens with a UK-born grandparent, and Right of Abode claims.",
+    detail: [
+      "You can apply for citizenship by naturalisation if you are 18 or over, of good character, meet the English and Life in the UK requirements, and meet the residence rules — usually five years in the UK, no more than 450 days outside it in that time, no more than 90 days outside in the last 12 months, and settlement held for the last 12 months. Naturalisation is a matter of law, not an entitlement, and the Home Secretary has discretion.",
+      "Under UK Ancestry, a Commonwealth citizen with a grandparent born in the United Kingdom and Islands — or, if born before 31 March 1922, in what is now the Republic of Ireland, or on a British registered ship or aircraft — who intends to work in the UK can be given five years' leave and then apply for settlement. Right of Abode, under the Immigration Act 1971, exempts British citizens and certain Commonwealth citizens from immigration control entirely.",
+    ],
+    points: [
+      "Naturalisation: 18+, good character, English + Life in the UK, five years' residence, 450/90-day absence limits, 12 months' settlement.",
+      "Ancestry: Commonwealth citizen, UK-born grandparent by blood or adoption, intending to work.",
+      "Right of Abode: live and work without restriction, no permission needed to enter.",
+    ],
+  },
+  {
+    slug: "visitor",
+    group: "UK",
+    code: "Visitor",
+    title: "Visit & Business Visitor Visas",
+    answer: "Come to the UK as a genuine visitor — for a holiday, family visit or permitted business activities — with a clear main reason for the trip.",
+    detail: [
+      "Visitors can do several activities on one trip, but you must be able to explain your main reason at application and on entry, and show adequate funds for the trip. The Home Office judges genuineness from your circumstances, stated purpose, travel history, compliance record and funds.",
+      "Business visitors can attend meetings, conferences and similar permitted activities, but cannot work in the UK. Extensions need a clear reason and funds for the extra time.",
+    ],
+    points: [
+      "Genuine visitor test: purpose, funds, travel history and ties.",
+      "Permitted business activities only — no UK work.",
+      "Supporting documents must back up what the application says.",
+      "Extensions need a clear reason and extra funds.",
+    ],
+  },
+  {
+    slug: "temporary-worker",
+    group: "UK",
+    code: "Temporary Worker",
+    title: "Temporary Worker Visas",
+    answer: "Short-term work in the UK under one of five Temporary Worker subcategories, with a licensed sponsor.",
+    detail: [
+      "This route replaced Tier 5. The subcategories are Creative and Sporting, Charity Workers, Religious Workers, Government Authorised Exchange and International Agreement.",
+      "These are temporary routes, not settlement routes. We check the subcategory, the sponsor and the role before filing, so a short placement is not refused on a technicality.",
+    ],
+    points: [
+      "Five subcategories: Creative & Sporting, Charity, Religious, Government Authorised Exchange, International Agreement.",
+      "Licensed sponsor required.",
+      "Temporary by design — not a route to settlement.",
+    ],
+  },
+  {
+    slug: "euss-family",
+    group: "UK",
+    code: "EU Settlement",
+    title: "EU Settlement Scheme Family Permits",
+    answer: "Join an EU, EEA or Swiss family member living in the UK, and then secure status under the EU Settlement Scheme.",
+    detail: [
+      "This is the current route for family members of EU citizens, replacing the old EEA Family Permit. Applications are made from outside the UK, and once here you apply for status under the EU Settlement Scheme before any permit expires.",
+      "We advise who qualifies — spouses, civil partners, children, dependent parents and other dependent relatives — and what evidence proves the relationship and the EU citizen's residence.",
+    ],
+    points: [
+      "Replaces the old EEA Family Permit.",
+      "Apply from outside the UK, then secure EUSS status.",
+      "Covers spouses, partners, children, dependent parents and other dependent relatives.",
+    ],
+  },
+  {
+    slug: "h-1b",
+    group: "US",
+    code: "US",
+    title: "H-1B Work Visa",
+    answer: "Specialty-occupation petitions for professionals, with employer filings prepared properly.",
+    detail: [
+      "We handle the petition, employer filings and evidence, and prepare you for each step of the process.",
+    ],
+    points: [
+      "Specialty occupation with a US employer.",
+      "Petition, employer filings and evidence prepared properly.",
+      "Prepared for each step of the process.",
+    ],
+  },
+  {
+    slug: "family-spouse",
+    group: "US",
+    code: "US",
+    title: "Family & Spouse Visas",
+    answer: "Spouse, fiancé(e) and immediate-relative petitions that keep families together.",
+    detail: [
+      "Family cases are personal — we keep you informed at every step and build a file that answers questions before they are asked.",
+    ],
+    points: [
+      "Spouse, fiancé(e) and immediate-relative petitions.",
+      "Files built to answer questions before they are asked.",
+      "Kept informed at every step.",
+    ],
+  },
+  {
+    slug: "green-cards",
+    group: "US",
+    code: "US",
+    title: "Green Cards & Citizenship",
+    answer: "Permanent residence and naturalisation, from eligibility to interview preparation.",
+    detail: [
+      "We map the route, the timeline and the evidence from day one.",
+    ],
+    points: [
+      "Permanent residence and naturalisation.",
+      "Route, timeline and evidence mapped from day one.",
+      "Interview preparation included.",
+    ],
+  },
+];
 
 export const extraFaqs = [
   { q: "How much will my case cost?", a: "Fees depend on the route and the complexity of your case. At your consultation we explain the full fee structure up front — no hidden charges, no surprises later." },

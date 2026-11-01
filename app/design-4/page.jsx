@@ -96,12 +96,19 @@ export default function Design4() {
       </section>
 
       <section className={styles.quotes}>
-        {testimonials.map((t) => (
-          <blockquote key={t.who}>
-            <p>“{t.quote}”</p>
-            <cite>{t.who}</cite>
+        <div className={styles.quoteFeature}>
+          <div className={styles.quoteImg}>
+            <img src={images.reviewingPapers.src} alt={images.reviewingPapers.alt} loading="lazy" width="800" height="600" />
+          </div>
+          <blockquote>
+            <p>“{testimonials[0].quote}”</p>
+            <cite>{testimonials[0].who}</cite>
+            <p style={{ fontSize: 13, opacity: 0.8 }}>{firm.badges.join(" • ")}</p>
+            <a href={firm.phoneLink} style={{ color: "#1e40af", fontWeight: "bold" }}>
+              Book a consultation →
+            </a>
           </blockquote>
-        ))}
+        </div>
       </section>
 
       <section className={styles.section}>
