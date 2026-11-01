@@ -34,6 +34,8 @@ export default function Contact() {
             <h3>Call us</h3>
             <p><a href={firm.phoneLink} style={{ color: "#d4af37" }}>{firm.phoneDisplay}</a></p>
             <p>Tap to call from your phone.</p>
+            <p>Landline: <a href={firm.landlineLink}>{firm.landline}</a></p>
+            <p>Email: <a href={`mailto:${firm.email}`}>{firm.email}</a></p>
           </article>
           <article className={styles.card}>
             <h3>Office hours</h3>

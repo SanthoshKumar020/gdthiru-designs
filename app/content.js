@@ -3,6 +3,9 @@ export const firm = {
   tagline: "Advocates & Solicitors",
   phoneDisplay: "+91 98841 23673",
   phoneLink: "tel:+919884123673",
+  email: "gdthiru@gmail.com",
+  landline: "044-28172118",
+  landlineLink: "tel:+914428172118",
   address: "Spencer Plaza, Shop G-90, Ground Floor, Phase-II, 769 Anna Salai, Chennai 600 002",
   mapsLink: "https://www.google.com/maps/search/?api=1&query=GD+Thiru+%26+Co.+Spencer+Plaza+Anna+Salai+Chennai+600002",
   directionsLink: "https://www.google.com/maps/dir/?api=1&destination=Spencer+Plaza+Anna+Salai+Chennai+600002",
@@ -31,7 +34,7 @@ export const usAreas = [
   { code: "US", title: "Green Cards & Citizenship", desc: "Permanent residence and naturalisation, from eligibility to interview preparation.", detail: "We map the route, the timeline and the evidence from day one." },
 ];
 
-export const moreAreas = "Also covered: UK Visit visas, Temporary Worker routes, EU Settlement Scheme family permits, plus US routes — B-1 / B-2 visitors, F-1 students, L-1 transfers, O-1 extraordinary ability and EB categories.";
+export const moreAreas = "Also covered: UK Visit visas, Temporary Worker routes, EU Settlement Scheme family permits, Overseas Domestic Worker visas, plus US routes — B-1 / B-2 visitors, F-1 students, L-1 transfers, O-1 extraordinary ability and EB categories.";
 
 export const whyUs = [
   { title: "Regulated & accountable", desc: "A law firm, not an agent. Your case is handled under professional regulation, with client money and data treated properly." },
@@ -303,12 +306,15 @@ export const extraFaqs = [
 
 export const aboutText = [
   "G D Thiru & Co. is a law firm specializing in UK Immigration Laws, with its head office in Chennai, India. The firm is a member of the Law Society of England & Wales and regulated by the Solicitors Regulation Authority, England.",
+  "The firm has expertise in all aspects of the Points Based System — Tier 1 Entrepreneur and Investor, Tier 2 General and Intra-Company Transfer, Tier 4 Student, Tier 5, settlement, business, Overseas Domestic Worker, ancestry and right of abode visas — as well as appeals, judicial review, administrative reviews and reconsideration applications.",
+  "Its work covers immigration rules and human rights applications — in particular Article 8, the right to private and family life, and Article 3, protection against inhumane and degrading treatment. With an established presence in India, its cross-border, client-focused approach supports local, national and international immigration issues of any complexity.",
+  "The firm is regulated by the Solicitors Regulation Authority and abides by its Code of Conduct and Client Care Charter. It takes client care very seriously and welcomes feedback — every new client is treated as a client for life.",
   "Immigration cases are personal. Behind every application is a job, a family, or a future that cannot wait. The firm works on one principle: tell clients the truth about their chances, prepare every file carefully, and keep them informed at every step.",
   "From the Spencer Plaza office on Anna Salai, Chennai, the firm advises individuals and families across India and abroad — on appeals, work visas, student visas, family routes, settlement and citizenship.",
 ];
 
 export const testimonials = [
-  { quote: "Thiru has been working on our family's immigration case. We passed through a hurdle couple of years ago successfully. We are going through a last one. He went through all the steps thoroughly with great patience. I am really impressed with his service. I would happily recommend to anyone who would want to deal with their immigration case.", who: "Family immigration client, from gdthiru.com" },
+  { quote: "Thiru has been working on our family's immigration case. We passed through a hurdle couple of years ago successfully. We are going through a last one. He went through all the steps thoroughly with great patience. I am really impressed with his service. I would happily recommend to anyone who would want to deal with their immigration case.", who: "Kiruthika Sureshkumar" },
 ];
 
 export const faqs = [
