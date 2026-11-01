@@ -25,13 +25,24 @@ export default function Nav() {
   const dropPanel = dropOpen && (
     <div className="dropPanel">
       <div className="dropPanelInner">
-      <div className="dropGroup">
+      <div className="dropGroup dropGroupWide">
         <h4>UK visas</h4>
-        {ukVisas.map((r) => (
-          <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setDropOpen(false)}>
-            {r.title}
-          </Link>
-        ))}
+        <div className="dropCols">
+          <div>
+            {ukVisas.slice(0, 4).map((r) => (
+              <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setDropOpen(false)}>
+                {r.title}
+              </Link>
+            ))}
+          </div>
+          <div>
+            {ukVisas.slice(4).map((r) => (
+              <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setDropOpen(false)}>
+                {r.title}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="dropGroup">
         <h4>US visas</h4>
