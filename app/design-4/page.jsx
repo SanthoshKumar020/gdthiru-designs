@@ -35,7 +35,7 @@ export default function Design4() {
         </div>
       </section>
 
-      <FlightPath className={styles.journey} />
+      <FlightPath className={styles.journey} duration={8} />
 
       <EnquiryBar />
 

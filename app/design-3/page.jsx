@@ -26,7 +26,7 @@ export default function Design3() {
         </div>
       </section>
 
-      <FlightPath className={styles.journey} />
+      <FlightPath className={styles.journey} duration={11} />
 
       <div className={styles.goldLine} />
 
@@ -56,7 +56,7 @@ export default function Design3() {
 
       <section id="why" className={styles.why}>
         <p className={styles.eyebrow}>Why GD Thiru &amp; Co.</p>
-        <h2>Quiet confidence, careful work</h2>
+        <h2>Why clients choose this firm</h2>
         <div className={styles.whyGrid}>
           {whyUs.map((w) => (
             <article key={w.title}>

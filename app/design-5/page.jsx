@@ -28,7 +28,7 @@ export default function Design5() {
         </div>
       </section>
 
-      <FlightPath className={styles.journey} />
+      <FlightPath className={styles.journey} duration={10} />
 
       <section id="practice" className={styles.section}>
         <p className={styles.secNum}>01</p>

@@ -32,7 +32,7 @@ export default function Design2() {
         </div>
       </section>
 
-      <FlightPath className={styles.journey} />
+      <FlightPath className={styles.journey} duration={9} />
 
       <section id="practice" className={styles.section}>
         <div className={styles.sectionHead}>

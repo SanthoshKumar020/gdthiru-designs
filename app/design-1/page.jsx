@@ -30,7 +30,7 @@ export default function Design1() {
         </div>
       </section>
 
-      <FlightPath className={styles.journey} />
+      <FlightPath className={styles.journey} duration={12} />
 
       <section id="practice" className={styles.section}>
         <p className={styles.eyebrow}>Practice Areas</p>
