@@ -449,10 +449,15 @@
   text-decoration: none;
 }
 .pageHero {
-  background: #1e40af;
+  background: linear-gradient(rgba(30, 64, 175, 0.88), rgba(30, 64, 175, 0.88)), url("https://images.squarespace-cdn.com/content/v1/64370e46961f32695027bf88/d590937e-d7a9-4086-a695-4a5db0de68f2/DSC_8464.jpg?format=750w");
+  background-size: cover;
+  background-position: center;
   color: #fff;
   text-align: center;
   padding: 64px 5vw 56px;
+}
+.footer a {
+  color: inherit;
 }
 .pageHero h1 {
   font-size: 40px;

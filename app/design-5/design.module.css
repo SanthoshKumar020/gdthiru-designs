@@ -404,6 +404,12 @@
   margin: 0 auto;
   padding: 56px 5vw 40px;
   border-top: 3px solid #1a1a1a;
+  background: linear-gradient(rgba(250, 249, 246, 0.85), rgba(250, 249, 246, 0.85)), url("https://thinblueflorida.com/wp-content/uploads/2012/02/SupremeCourtBuilding.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.footer a {
+  color: inherit;
 }
 .pageHero h1 {
   font-size: 46px;

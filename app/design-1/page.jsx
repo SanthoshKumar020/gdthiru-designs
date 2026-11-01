@@ -1,5 +1,6 @@
 import styles from "./design.module.css";
 import Nav from "./Nav";
+import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
 import SafeImg from "../components/SafeImg";
 
@@ -119,11 +120,7 @@ export default function Design1() {
         <a className={styles.btnGold} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
       </section>
 
-      <footer className={styles.footer}>
-        <strong>{firm.name}</strong>
-        <p>{firm.address}</p>
-        <p>{firm.hours}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

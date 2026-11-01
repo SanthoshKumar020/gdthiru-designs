@@ -1,5 +1,6 @@
 import styles from "../design.module.css";
 import Nav from "../Nav";
+import Footer from "../Footer";
 import { firm, aboutText, whyUs } from "../../content";
 
 export const metadata = { title: "About the Firm | GD Thiru & Co." };
@@ -37,10 +38,7 @@ export default function About() {
         <p>{firm.address} · {firm.hours}</p>
         <a className={styles.btnPrimary} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
       </section>
-      <footer className={styles.footer}>
-        <p><strong>{firm.name}</strong> — {firm.tagline}</p>
-        <p>{firm.address}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

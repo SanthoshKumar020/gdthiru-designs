@@ -444,9 +444,14 @@
   text-decoration: none;
 }
 .pageHero {
-  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+  background: linear-gradient(rgba(239, 246, 255, 0.88), rgba(255, 255, 255, 0.88)), url("https://legalcurated.com/wp-content/uploads/2025/12/lady-justice-statue-front-courthouse-23-2151998148-1-172943-full.webp");
+  background-size: cover;
+  background-position: center;
   text-align: center;
   padding: 64px 5vw 56px;
+}
+.footer a {
+  color: inherit;
 }
 .pageHero h1 {
   font-size: 42px;

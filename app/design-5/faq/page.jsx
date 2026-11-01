@@ -1,5 +1,6 @@
 import styles from "../design.module.css";
 import Nav from "../Nav";
+import Footer from "../Footer";
 import { firm, faqs, extraFaqs } from "../../content";
 
 export const metadata = { title: "FAQ | GD Thiru & Co." };
@@ -30,9 +31,7 @@ export default function Faq() {
         <p>{firm.hours}</p>
         <a className={styles.btnDark} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
       </section>
-      <footer className={styles.footer}>
-        <p>{firm.name} · {firm.tagline}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

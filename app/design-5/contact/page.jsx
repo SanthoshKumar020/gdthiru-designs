@@ -1,5 +1,6 @@
 import styles from "../design.module.css";
 import Nav from "../Nav";
+import Footer from "../Footer";
 import { firm } from "../../content";
 
 export const metadata = { title: "Contact | GD Thiru & Co." };
@@ -11,6 +12,17 @@ export default function Contact() {
       <section className={styles.pageHero}>
         <h1>Contact Us</h1>
         <p>Call us, or visit the office on Anna Salai, Chennai.</p>
+      </section>
+      <section className={styles.section} style={{ paddingBottom: 0 }}>
+        <p style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 720 }}>
+          G D Thiru &amp; Co. is a law firm specializing in UK Immigration Laws, with its head
+          office in Chennai. At your consultation we assess your route, explain timelines and
+          fees honestly, and give you a clear document checklist.
+        </p>
+        <p style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 720 }}>
+          It helps to bring your passport, any previous refusal letters, and the key dates of
+          your case.
+        </p>
       </section>
       <section className={styles.section}>
         <div className={styles.whyGrid}>
@@ -45,9 +57,7 @@ export default function Contact() {
         <p>{firm.hours}</p>
         <a className={styles.btnDark} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
       </section>
-      <footer className={styles.footer}>
-        <p>{firm.name} · {firm.tagline}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

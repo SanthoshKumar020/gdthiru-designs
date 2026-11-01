@@ -1,5 +1,6 @@
 import styles from "../design.module.css";
 import Nav from "../Nav";
+import Footer from "../Footer";
 import { firm, practiceAreas, practiceDetail, moreAreas, usAreas } from "../../content";
 
 export const metadata = { title: "Practice Areas | GD Thiru & Co." };
@@ -11,6 +12,13 @@ export default function PracticeAreas() {
       <section className={styles.pageHero}>
         <h1>Practice Areas</h1>
         <p>UK and US immigration routes, explained clearly — and handled end to end.</p>
+      </section>
+      <section className={styles.section} style={{ paddingBottom: 0 }}>
+        <p style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 720 }}>
+          Every case is different. G D Thiru &amp; Co. specializes in UK immigration law, and the
+          routes below follow the firm&apos;s own list from gdthiru.com, updated to current Home
+          Office route names. US routes are listed separately, on request.
+        </p>
       </section>
       <section className={styles.section}>
         <div className={styles.cards}>
@@ -44,11 +52,7 @@ export default function PracticeAreas() {
         <p>{firm.hours}</p>
         <a className={styles.btnGold} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
       </section>
-      <footer className={styles.footer}>
-        <strong>{firm.name}</strong>
-        <p>{firm.address}</p>
-        <p>{firm.hours}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
