@@ -30,8 +30,12 @@ export default function Hub() {
         ))}
       </div>
       <p className="hubNote">
-        Demo note: the visa categories are shown as options for the firm to confirm, and the
-        testimonials are sample text to be replaced with real client words.
+        Content note: practice areas follow the firm&apos;s own list from gdthiru.com, with
+        scrapped UK visa categories (Tier 1, Tier 2, Tier 4, Tier 5, EEA) updated to their
+        current routes. The testimonial is the firm&apos;s real client testimonial from
+        gdthiru.com. US routes are shown as options for the firm to confirm. Images are web
+        photos used as mockups — the final site should use licensed photos or the firm&apos;s
+        own photos.
       </p>
     </main>
   );

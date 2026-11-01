@@ -1,4 +1,5 @@
 import styles from "./design.module.css";
+import Nav from "./Nav";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
 import SafeImg from "../components/SafeImg";
 
@@ -16,15 +17,12 @@ function EnquiryBar() {
 export default function Design4() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <span className={styles.brand}>{firm.name} <small>{firm.tagline}</small></span>
-        <a className={styles.headerCall} href={firm.phoneLink}>📞 {firm.phoneDisplay}</a>
-      </header>
+      <Nav />
 
       <section className={styles.hero}>
         <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.statueOfLiberty.src} alt={images.statueOfLiberty.alt} />
         <div className={styles.heroOverlay} />
-        <div className={styles.heroInner}>
+        <div className={`${styles.heroInner} heroTextAnim`}>
           <h1>{hero.title}</h1>
           <p>{hero.sub}</p>
           <div className={styles.heroCtas}>
@@ -54,6 +52,14 @@ export default function Design4() {
       </section>
 
       <EnquiryBar />
+
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.6), rgba(30, 64, 175, 0.6)), url(${images.goldenGate.src})` }}>
+        <div className={styles.parallaxInner}>
+          <h2>Questions about your visa? Talk to the firm directly.</h2>
+          <p>No call centres. No waiting. Your case, your lawyer.</p>
+          <a href="/design-4/contact">Book a consultation →</a>
+        </div>
+      </section>
 
       <section id="why" className={styles.why}>
         <h2>Why clients choose GD Thiru &amp; Co.</h2>

@@ -1,0 +1,45 @@
+import styles from "../design.module.css";
+import Nav from "../Nav";
+import { firm, aboutText, whyUs } from "../../content";
+
+export const metadata = { title: "About the Firm | GD Thiru & Co." };
+
+export default function About() {
+  return (
+    <div className={styles.page}>
+      <Nav />
+      <section className={styles.pageHero}>
+        <h1>About the Firm</h1>
+        <p>A Chennai law firm for UK and US immigration — regulated, plain-spoken, careful.</p>
+      </section>
+      <section className={styles.section}>
+        {aboutText.map((t) => (
+          <p key={t.slice(0, 24)} style={{ fontSize: 17, lineHeight: 1.7, color: "#b8b5ad" }}>{t}</p>
+        ))}
+      </section>
+      <section className={styles.why}>
+        <p className={styles.eyebrow}>Why GD Thiru &amp; Co.</p>
+        <h2>How we work</h2>
+        <div className={styles.whyGrid}>
+          {whyUs.map((w) => (
+            <article key={w.title}>
+              <h3>{w.title}</h3>
+              <p>{w.desc}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className={styles.cta}>
+        <p className={styles.eyebrow}>Begin today</p>
+        <h2>Start with a consultation</h2>
+        <p>{firm.address}</p>
+        <p>{firm.hours}</p>
+        <a className={styles.btnGold} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
+      </section>
+      <footer className={styles.footer}>
+        <p>{firm.name} · {firm.tagline}</p>
+        <p>{firm.badges.join(" · ")}</p>
+      </footer>
+    </div>
+  );
+}

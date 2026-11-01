@@ -1,4 +1,5 @@
 import styles from "./design.module.css";
+import Nav from "./Nav";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
 import SafeImg from "../components/SafeImg";
 
@@ -7,19 +8,12 @@ export const metadata = { title: "Design 3 — Premium Dark | GD Thiru & Co." };
 export default function Design3() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <span className={styles.brand}>{firm.name}</span>
-        <nav className={styles.nav}>
-          <a href="#practice">Practice Areas</a>
-          <a href="#why">Why Us</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+      <Nav />
 
       <section className={styles.hero}>
         <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.ladyJustice.src} alt={images.ladyJustice.alt} />
         <div className={styles.heroOverlay} />
-        <div className={styles.heroContent}>
+        <div className={`${styles.heroContent} heroTextAnim`}>
           <p className={styles.heroEyebrow}>Advocates &amp; Solicitors — Est. Chennai</p>
           <h1>{hero.title}</h1>
           <p className={styles.heroSub}>{hero.sub}</p>
@@ -46,6 +40,14 @@ export default function Design3() {
           ))}
         </div>
         <p className={styles.more}>{moreAreas}</p>
+      </section>
+
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(10, 11, 13, 0.62), rgba(10, 11, 13, 0.62)), url(${images.statueOfLiberty.src})` }}>
+        <div className={styles.parallaxInner}>
+          <h2>Quiet confidence, careful work.</h2>
+          <p>Your case deserves a firm that prepares, not one that promises.</p>
+          <a href="/design-3/contact">Book a consultation →</a>
+        </div>
       </section>
 
       <section id="why" className={styles.why}>

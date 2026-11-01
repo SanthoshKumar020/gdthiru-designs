@@ -38,6 +38,21 @@ html.js-scroll section.inview {
   transform: scale(1.06);
 }
 
+/* Hero text entrance. */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.heroTextAnim {
+  animation: fadeUp 0.9s ease both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html.js-scroll section {
     opacity: 1;

@@ -15,15 +15,21 @@ export const hero = {
 };
 
 export const practiceAreas = [
-  { code: "UK", title: "Skilled Worker Visa", desc: "Work in the UK with a licensed sponsor. Eligibility, sponsorship and filing, handled end to end." },
-  { code: "UK", title: "Innovator Founder Visa", desc: "For entrepreneurs with an innovative, viable and scalable business idea endorsed for the UK." },
-  { code: "UK", title: "Student Visa", desc: "Study at a licensed UK institution, with dependants and post-study routes explained clearly." },
-  { code: "US", title: "H-1B Work Visa", desc: "Specialty-occupation petitions for professionals, with employer filings prepared properly." },
-  { code: "US", title: "Family & Spouse Visas", desc: "Spouse, fiance(e) and immediate-relative petitions that keep families together." },
-  { code: "US", title: "Green Cards & Citizenship", desc: "Permanent residence and naturalisation, from eligibility to interview preparation." },
+  { code: "Appeals", title: "Appeals & Judicial Review", desc: "Challenging refusals and unlawful decisions — appeals and judicial review of Home Office decisions." },
+  { code: "Work", title: "Skilled Worker Visa", desc: "Work in the UK with a licensed sponsor. Eligibility, sponsorship and filing, handled end to end." },
+  { code: "Founder", title: "Innovator Founder Visa", desc: "For entrepreneurs with an innovative, viable and scalable business idea endorsed for the UK." },
+  { code: "Student", title: "Student Visa", desc: "Study at a licensed UK institution, with dependants and post-study routes explained clearly." },
+  { code: "Family", title: "Settlement & Family Visas", desc: "Settlement and family routes, including spouse, dependant and long-residence cases." },
+  { code: "Citizenship", title: "British Citizenship & Ancestry", desc: "British nationality and citizenship applications, plus Ancestry and Right of Abode claims." },
 ];
 
-export const moreAreas = "Also covered: Visitor visas (B-1 / B-2), F-1 student, L-1 transfers, O-1 extraordinary ability, EB categories, and humanitarian routes.";
+export const usAreas = [
+  { code: "US", title: "H-1B Work Visa", desc: "Specialty-occupation petitions for professionals, with employer filings prepared properly.", detail: "We handle the petition, employer filings and evidence, and prepare you for each step of the process." },
+  { code: "US", title: "Family & Spouse Visas", desc: "Spouse, fiance(e) and immediate-relative petitions that keep families together.", detail: "Family cases are personal — we keep you informed at every step and build a file that answers questions before they are asked." },
+  { code: "US", title: "Green Cards & Citizenship", desc: "Permanent residence and naturalisation, from eligibility to interview preparation.", detail: "We map the route, the timeline and the evidence from day one." },
+];
+
+export const moreAreas = "Also covered: UK Visit visas, Temporary Worker routes, EU Settlement Scheme family permits, plus US routes — B-1 / B-2 visitors, F-1 students, L-1 transfers, O-1 extraordinary ability and EB categories.";
 
 export const whyUs = [
   { title: "Regulated & accountable", desc: "A law firm, not an agent. Your case is handled under professional regulation, with client money and data treated properly." },
@@ -76,9 +82,29 @@ export const destinations = [
   { img: "supremeCourt", place: "Washington, D.C.", note: "U.S. Supreme Court — the law of the land" },
 ];
 
+export const practiceDetail = {
+  "Appeals & Judicial Review": "If a visa is refused or a decision is unlawful, the firm challenges it — through an appeal where a right of appeal exists, and judicial review where it does not. Every refusal is reviewed on its own merits before advice is given.",
+  "Skilled Worker Visa": "The UK Skilled Worker route lets you work for a licensed UK sponsor in an eligible job. We check your job, salary and sponsor licence, then prepare the application and supporting evidence so nothing is left to chance.",
+  "Innovator Founder Visa": "For entrepreneurs with an innovative, viable and scalable business idea. The idea must be endorsed by an approved endorsing body — we help you shape the business plan and endorsement case before anything is filed.",
+  "Student Visa": "Study at a licensed UK institution with a Confirmation of Acceptance for Studies. We cover the application, finances evidence, and dependant and post-study options in plain language.",
+  "Settlement & Family Visas": "Settlement and family routes are personal and stressful — we keep you informed at every step and build a file that answers questions before they are asked.",
+  "British Citizenship & Ancestry": "From naturalisation and registration as a British citizen to Ancestry visas and Right of Abode claims, we map the route, the evidence and the timeline from day one.",
+};
+
+export const extraFaqs = [
+  { q: "How much will my case cost?", a: "Fees depend on the route and the complexity of your case. At your consultation we explain the full fee structure up front — no hidden charges, no surprises later." },
+  { q: "What documents will I need?", a: "It depends on your route. After the consultation you receive a clear checklist of exactly what evidence is needed, and we review everything before it is submitted." },
+  { q: "Can I consult by phone if I am not in Chennai?", a: "Yes. Consultations can be arranged by phone or in person at the Chennai office. Call us and we will fix a time that works for you." },
+];
+
+export const aboutText = [
+  "G D Thiru & Co. is a law firm specializing in UK Immigration Laws, with its head office in Chennai, India. The firm is a member of the Law Society of England & Wales and regulated by the Solicitors Regulation Authority, England.",
+  "Immigration cases are personal. Behind every application is a job, a family, or a future that cannot wait. The firm works on one principle: tell clients the truth about their chances, prepare every file carefully, and keep them informed at every step.",
+  "From the Spencer Plaza office on Anna Salai, Chennai, the firm advises individuals and families across India and abroad — on appeals, work visas, student visas, family routes, settlement and citizenship.",
+];
+
 export const testimonials = [
-  { quote: "They explained everything in simple words and told us honestly what to expect. Our file was prepared so well that the process felt smooth.", who: "Client, Skilled Worker visa" },
-  { quote: "After a refusal elsewhere, they rebuilt our application properly and guided us through every document. We finally got our approval.", who: "Client, Family visa" },
+  { quote: "Thiru has been working on our family's immigration case. We passed through a hurdle couple of years ago successfully. We are going through a last one. He went through all the steps thoroughly with great patience. I am really impressed with his service. I would happily recommend to anyone who would want to deal with their immigration case.", who: "Family immigration client, from gdthiru.com" },
 ];
 
 export const faqs = [

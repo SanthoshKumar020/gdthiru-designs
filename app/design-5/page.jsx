@@ -1,4 +1,5 @@
 import styles from "./design.module.css";
+import Nav from "./Nav";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
 import SafeImg from "../components/SafeImg";
 
@@ -7,21 +8,11 @@ export const metadata = { title: "Design 5 — Editorial | GD Thiru & Co." };
 export default function Design5() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <span className={styles.date}>Chennai, India</span>
-        <span className={styles.brand}>{firm.name}</span>
-        <a href={firm.phoneLink}>{firm.phoneDisplay}</a>
-      </header>
-      <nav className={styles.nav}>
-        <a href="#practice">Practice Areas</a>
-        <a href="#why">The Firm</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <Nav />
 
       <section className={styles.hero}>
         <p className={styles.kicker}>Immigration Law — United Kingdom · United States</p>
-        <h1>{hero.title}</h1>
+        <h1 className="heroTextAnim">{hero.title}</h1>
         <figure className={`${styles.heroFigure} imgHover`}>
           <SafeImg className="heroImgAnim" src={images.nycSkyline.src} alt={images.nycSkyline.alt} />
           <figcaption>New York City — where many of our clients begin their American story.</figcaption>
@@ -50,6 +41,14 @@ export default function Design5() {
           ))}
         </div>
         <p className={styles.more}>{moreAreas}</p>
+      </section>
+
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url(${images.supremeCourt.src})` }}>
+        <div className={styles.parallaxInner}>
+          <h2>The law, in plain language.</h2>
+          <p>Complicated rules, explained simply — and handled properly.</p>
+          <a href="/design-5/contact">Book a consultation →</a>
+        </div>
       </section>
 
       <section id="why" className={styles.section}>

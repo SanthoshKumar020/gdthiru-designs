@@ -372,3 +372,124 @@
     padding: 9px 12px;
   }
 }
+
+/* Hamburger + nav bar + parallax + subpage hero (v3) */
+.hamburger {
+  display: none;
+  background: none;
+  border: 1px solid #1e40af;
+  color: #1e40af;
+  font-size: 22px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.navBar {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  background: #1e40af;
+  padding: 13px 5vw;
+}
+.navBar a {
+  color: #dbeafe;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 4px;
+  transition: color 0.2s ease;
+}
+.navBar a.active {
+  color: #f59e0b;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.btnWhite {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btnWhite:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(30, 64, 175, 0.14);
+}
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 64px 5vw;
+}
+.parallaxInner h2 {
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+.parallaxInner p {
+  font-size: 17px;
+  color: #dbeafe;
+  margin: 0 0 24px;
+}
+.parallaxInner a {
+  display: inline-block;
+  background: #f59e0b;
+  color: #1e293b;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.pageHero {
+  background: #1e40af;
+  color: #fff;
+  text-align: center;
+  padding: 64px 5vw 56px;
+}
+.pageHero h1 {
+  font-size: 40px;
+  margin: 0 0 12px;
+}
+.pageHero p {
+  font-size: 17px;
+  color: #dbeafe;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+@media (max-width: 820px) {
+  .hamburger {
+    display: block;
+  }
+  .navBar {
+    display: none;
+  }
+  .navBar.navOpen {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 5vw 16px;
+  }
+  .navBar.navOpen a {
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .parallax {
+    background-attachment: scroll;
+    min-height: 320px;
+  }
+  .parallaxInner h2 {
+    font-size: 27px;
+  }
+  .pageHero h1 {
+    font-size: 29px;
+  }
+}

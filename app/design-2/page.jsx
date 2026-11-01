@@ -1,4 +1,5 @@
 import styles from "./design.module.css";
+import Nav from "./Nav";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
 import SafeImg from "../components/SafeImg";
 
@@ -7,21 +8,11 @@ export const metadata = { title: "Design 2 — Clean | GD Thiru & Co." };
 export default function Design2() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <div className={styles.brand}>
-          <span className={styles.logo}>GD Thiru <em>&amp; Co.</em></span>
-        </div>
-        <nav className={styles.nav}>
-          <a href="#practice">Practice Areas</a>
-          <a href="#why">Why Us</a>
-          <a href="#process">Process</a>
-          <a className={styles.navCta} href="#contact">Book consultation</a>
-        </nav>
-      </header>
+      <Nav />
 
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <div className={styles.heroText}>
+          <div className={`${styles.heroText} heroTextAnim`}>
             <p className={styles.heroEyebrow}>Immigration law · Chennai</p>
             <h1>{hero.title}</h1>
             <p className={styles.heroSub}>{hero.sub}</p>
@@ -56,6 +47,14 @@ export default function Design2() {
               <span className={styles.cardArrow}>Learn more →</span>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url(${images.nycSkyline.src})` }}>
+        <div className={styles.parallaxInner}>
+          <h2>One firm. Two countries. One clear plan.</h2>
+          <p>From Chennai to New York and London — your case, handled properly.</p>
+          <a href="/design-2/contact">Book a consultation →</a>
         </div>
       </section>
 

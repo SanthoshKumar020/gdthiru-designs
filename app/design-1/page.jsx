@@ -1,4 +1,5 @@
 import styles from "./design.module.css";
+import Nav from "./Nav";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
 import SafeImg from "../components/SafeImg";
 
@@ -7,30 +8,12 @@ export const metadata = { title: "Design 1 — Classic | GD Thiru & Co." };
 export default function Design1() {
   return (
     <div className={styles.page}>
-      <div className={styles.topbar}>
-        <span>{firm.address}</span>
-        <a href={firm.phoneLink}>{firm.phoneDisplay}</a>
-      </div>
-      <header className={styles.header}>
-        <div className={styles.brand}>
-          <span className={styles.monogram}>GT</span>
-          <span>
-            <strong>{firm.name}</strong>
-            <small>{firm.tagline}</small>
-          </span>
-        </div>
-        <nav className={styles.nav}>
-          <a href="#practice">Practice Areas</a>
-          <a href="#why">Why Us</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+      <Nav />
 
       <section className={styles.hero}>
         <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.supremeCourt.src} alt={images.supremeCourt.alt} />
         <div className={styles.heroOverlay} />
-        <div className={styles.heroContent}>
+        <div className={`${styles.heroContent} heroTextAnim`}>
           <p className={styles.heroEyebrow}>Chennai · United Kingdom · United States</p>
           <h1>{hero.title}</h1>
           <div className={styles.rule} />
@@ -58,6 +41,14 @@ export default function Design1() {
           ))}
         </div>
         <p className={styles.more}>{moreAreas}</p>
+      </section>
+
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(15, 42, 74, 0.62), rgba(15, 42, 74, 0.62)), url(${images.ladyJustice.src})` }}>
+        <div className={styles.parallaxInner}>
+          <h2>Your future, in two countries.</h2>
+          <p>UK and US immigration, from one Chennai office.</p>
+          <a href="/design-1/contact">Book a consultation →</a>
+        </div>
       </section>
 
       <section id="why" className={styles.sectionAlt}>

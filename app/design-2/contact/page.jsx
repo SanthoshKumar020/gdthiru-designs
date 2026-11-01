@@ -1,0 +1,52 @@
+import styles from "../design.module.css";
+import Nav from "../Nav";
+import { firm } from "../../content";
+
+export const metadata = { title: "Contact | GD Thiru & Co." };
+
+export default function Contact() {
+  return (
+    <div className={styles.page}>
+      <Nav />
+      <section className={styles.pageHero}>
+        <h1>Contact Us</h1>
+        <p>Call us, or visit the office on Anna Salai, Chennai.</p>
+      </section>
+      <section className={styles.section}>
+        <div className={styles.cards}>
+          <article className={styles.card}>
+            <h3>Visit the office</h3>
+            <p>{firm.address}</p>
+          </article>
+          <article className={styles.card}>
+            <h3>Call us</h3>
+            <p><a href={firm.phoneLink}>{firm.phoneDisplay}</a></p>
+            <p>Tap to call from your phone.</p>
+          </article>
+          <article className={styles.card}>
+            <h3>Office hours</h3>
+            <p>{firm.hours}</p>
+          </article>
+        </div>
+        <div style={{ marginTop: 28 }}>
+          <iframe
+            title="Map to GD Thiru & Co., Spencer Plaza, Chennai"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=80.2414%2C13.0512%2C80.2814%2C13.0712&layer=mapnik&marker=13.061285%2C80.261452"
+            style={{ width: "100%", height: 360, border: 0, borderRadius: 16 }}
+            loading="lazy"
+          />
+          <p className={styles.sectionNote}>Spencer Plaza, Anna Salai, Chennai — view larger map on OpenStreetMap.</p>
+        </div>
+      </section>
+      <section className={styles.cta}>
+        <h2>Start with a consultation</h2>
+        <p>{firm.address} · {firm.hours}</p>
+        <a className={styles.btnPrimary} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
+      </section>
+      <footer className={styles.footer}>
+        <p><strong>{firm.name}</strong> — {firm.tagline}</p>
+        <p>{firm.address}</p>
+      </footer>
+    </div>
+  );
+}
