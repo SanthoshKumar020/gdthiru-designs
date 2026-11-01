@@ -2,6 +2,7 @@ import styles from "../design.module.css";
 import Nav from "../Nav";
 import Footer from "../Footer";
 import { firm } from "../../content";
+import { ShineBorder } from "../../components/ui/shine-border";
 
 export const metadata = { title: "Contact | GD Thiru & Co." };
 
@@ -53,7 +54,9 @@ export default function Contact() {
       <section className={styles.cta}>
         <h2>Start with a consultation</h2>
         <p>{firm.hours}</p>
-        <a className={styles.btnGold} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
+        <ShineBorder borderRadius={0} borderWidth={2} duration={10} color="#0f2a4a" shineColor="#ffffff" className="w-fit min-w-0 min-h-0 bg-transparent px-0 py-0">
+          <a className={styles.btnGold} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
+        </ShineBorder>
       </section>
       <Footer />
     </div>

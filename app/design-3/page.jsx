@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import { BentoGrid, BentoCard } from "../components/ui/bento-grid";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 3 — Premium Dark | GD Thiru & Co." };
@@ -32,16 +33,22 @@ export default function Design3() {
       <section id="practice" className={styles.section}>
         <p className={styles.eyebrow}>Practice Areas</p>
         <h2>Visa routes we handle</h2>
-        <div className={styles.cards}>
+        <BentoGrid className="grid-cols-1 md:grid-cols-3 auto-rows-auto">
           {practiceAreas.map((p, i) => (
-            <article key={p.title} className={styles.card}>
-              <span className={styles.cardIndex}>0{i + 1}</span>
-              <p className={styles.cardCode}>{p.code}</p>
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
-            </article>
+            <BentoCard
+              key={p.title}
+              name={p.title}
+              description={`${p.code} · ${p.desc}`}
+              href="/design-3/practice-areas"
+              cta="Explore routes"
+              className={
+                i === 0
+                  ? "md:col-span-2 md:row-span-2 border-[#2a2d33] bg-[#121417] text-white"
+                  : "border-[#2a2d33] bg-[#121417] text-white"
+              }
+            />
           ))}
-        </div>
+        </BentoGrid>
         <p className={styles.more}>{moreAreas}</p>
       </section>
 

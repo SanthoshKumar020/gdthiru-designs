@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import { BlurFade } from "../components/ui/blur-fade";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 5 — Editorial | GD Thiru & Co." };
@@ -57,10 +58,12 @@ export default function Design5() {
       <section id="why" className={styles.section}>
         <p className={styles.secNum}>02</p>
         <h2>The Firm</h2>
-        <p className={styles.standfirst}>
-          A Chennai law firm practising immigration law — regulated, plain-spoken, and careful
-          with the details that decide cases.
-        </p>
+        <BlurFade delay={0.25} yOffset={8} blur="8px">
+          <p className={styles.standfirst}>
+            A Chennai law firm practising immigration law — regulated, plain-spoken, and careful
+            with the details that decide cases.
+          </p>
+        </BlurFade>
         <div className={styles.whyGrid}>
           {whyUs.map((w) => (
             <article key={w.title}>

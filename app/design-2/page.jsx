@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations, usAreas } from "../content";
+import { Marquee } from "../components/ui/marquee";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 2 — Clean | GD Thiru & Co." };
@@ -31,13 +32,13 @@ export default function Design2() {
         </div>
       </section>
 
-      <div className={styles.marquee} aria-label="Visa routes we handle">
-        <div className={styles.marqueeTrack}>
-          {[...practiceAreas, ...usAreas, ...practiceAreas, ...usAreas].map((a, i) => (
-            <span key={i}>{a.title} ✦</span>
-          ))}
-        </div>
-      </div>
+      <Marquee pauseOnHover className="bg-[#1d4ed8] py-3.5 text-white [--duration:30s] [--gap:2.5rem]">
+        {[...practiceAreas, ...usAreas].map((a) => (
+          <span key={a.title} className="whitespace-nowrap font-semibold">
+            {a.title} ✦
+          </span>
+        ))}
+      </Marquee>
 
       <section id="practice" className={styles.section}>
         <div className={styles.sectionHead}>

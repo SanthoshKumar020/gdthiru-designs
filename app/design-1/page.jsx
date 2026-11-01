@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import { ShineBorder } from "../components/ui/shine-border";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 1 — Classic | GD Thiru & Co." };
@@ -20,7 +21,9 @@ export default function Design1() {
           <div className={styles.rule} />
           <p className={styles.heroSub}>{hero.sub}</p>
           <div className={styles.heroCtas}>
-            <a className={styles.btnGold} href="#contact">{hero.cta}</a>
+            <ShineBorder borderRadius={0} borderWidth={2} duration={10} color="#0f2a4a" shineColor="#ffffff" className="w-fit min-w-0 min-h-0 bg-transparent px-0 py-0">
+              <a className={styles.btnGold} href="#contact">{hero.cta}</a>
+            </ShineBorder>
             <a className={styles.btnGhost} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
           </div>
           <div className={styles.badges}>

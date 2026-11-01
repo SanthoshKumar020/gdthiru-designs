@@ -1,1 +1,1 @@
-{"dependencies":{"next":"^15.3.0","react":"^19.0.0","react-dom":"^19.0.0"},"name":"gdthiru-designs","private":true,"scripts":{"build":"next build","dev":"next dev","start":"next start"},"version":"1.0.0"}
+{"dependencies":{"@tailwindcss/postcss":"^4.3.3","clsx":"^2.1.1","motion":"^14.9.0","next":"^15.3.0","react":"^19.0.0","react-dom":"^19.0.0","tailwind-merge":"^3.7.0","tailwindcss":"^4.3.3"},"name":"gdthiru-designs","private":true,"scripts":{"build":"next build","dev":"next dev","start":"next start"},"version":"1.0.0"}

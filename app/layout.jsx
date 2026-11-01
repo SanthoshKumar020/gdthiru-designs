@@ -1,4 +1,5 @@
 import ScrollAnimations from "./components/ScrollAnimations";
+import "./tailwind.css";
 import "./reveal.css";
 
 export const metadata = {

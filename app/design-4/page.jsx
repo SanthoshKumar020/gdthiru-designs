@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import { PulsatingButton } from "../components/ui/pulsating-button";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 4 — Professional Blue | GD Thiru & Co." };
@@ -27,7 +28,9 @@ export default function Design4() {
           <h1>{hero.title}</h1>
           <p>{hero.sub}</p>
           <div className={styles.heroCtas}>
-            <a className={styles.btnWhite} href="#contact">{hero.cta}</a>
+            <PulsatingButton href="#contact" pulseColor="#f59e0b" duration="1.5s" className="bg-white px-7 py-3.5 rounded-md font-bold text-[#1e40af] no-underline hover:opacity-90 transition">
+              {hero.cta}
+            </PulsatingButton>
             <a className={styles.btnOutline} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
           </div>
           <p className={styles.heroHours}>{firm.hours} · {firm.address}</p>

@@ -425,25 +425,7 @@
   display: none;
 }
 
-/* v9: 21st.dev-style bento grid for practice areas */
-#practice .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-#practice .cards .card:first-child {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-#practice .cards .card:first-child h3 {
-  font-size: 30px;
-}
-@media (max-width: 820px) {
-  #practice .cards .card:first-child {
-    grid-column: auto;
-    grid-row: auto;
-  }
-}
+
 
 /* v7: mobile header fixes */
 
