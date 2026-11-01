@@ -590,3 +590,35 @@
     aspect-ratio: 16 / 9;
   }
 }
+
+/* v11.5: sticky footer — no gap below the footer on short pages */
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  margin-top: auto;
+}
+/* v11.5: mobile header fits one row on narrow phones */
+@media (max-width: 520px) {
+  .header {
+    padding: 16px 4vw;
+  }
+  .brand {
+    gap: 10px;
+  }
+  .monogram {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+  .brand strong {
+    font-size: 16px;
+  }
+  .hamburger {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+}

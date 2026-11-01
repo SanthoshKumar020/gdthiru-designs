@@ -542,3 +542,14 @@
     aspect-ratio: 16 / 9;
   }
 }
+
+/* v11.5: sticky footer — no gap below the footer on short pages */
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  margin-top: auto;
+}

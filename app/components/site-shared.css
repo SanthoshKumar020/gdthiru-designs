@@ -197,3 +197,23 @@
   padding: 16px;
   border-radius: 10px;
 }
+
+/* v11.5: practice anchor nav scrolls horizontally on mobile (no pill wall) */
+@media (max-width: 820px) {
+  .anchorNav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .anchorNav span,
+  .anchorNav a {
+    flex-shrink: 0;
+  }
+}
+/* v11.5: route cards breathe better on narrow phones */
+@media (max-width: 520px) {
+  .routeList > article {
+    padding: 20px;
+  }
+}
