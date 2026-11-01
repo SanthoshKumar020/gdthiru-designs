@@ -28,7 +28,7 @@ export default function Contact() {
         <div className={styles.cards}>
           <article className={styles.card}>
             <h3>Visit the office</h3>
-            <p>{firm.address}</p>
+            <p><a href={firm.mapsLink} target="_blank" rel="noreferrer">{firm.address}</a></p>
           </article>
           <article className={styles.card}>
             <h3>Call us</h3>
@@ -47,7 +47,7 @@ export default function Contact() {
             style={{ width: "100%", height: 360, border: 0, borderRadius: 16 }}
             loading="lazy"
           />
-          <p className={styles.sectionNote}>Spencer Plaza, Anna Salai, Chennai — view larger map on OpenStreetMap.</p>
+          <p className={styles.sectionNote}><a href={firm.directionsLink} target="_blank" rel="noreferrer">Get directions on Google Maps →</a></p>
         </div>
       </section>
       <section className={styles.cta}>

@@ -31,7 +31,7 @@ export default function Footer() {
           </p>
         </div>
         <div style={{ maxWidth: 320 }}>
-          <p style={{ marginTop: 0 }}>{firm.address}</p>
+          <p style={{ marginTop: 0 }}><a href={firm.mapsLink} target="_blank" rel="noreferrer">{firm.address}</a></p>
           <p><a href={firm.phoneLink}>{firm.phoneDisplay}</a></p>
           <p>{firm.hours}</p>
         </div>

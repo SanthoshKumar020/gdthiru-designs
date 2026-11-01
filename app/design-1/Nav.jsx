@@ -20,7 +20,7 @@ export default function Nav() {
   return (
     <>
       <div className={styles.topbar}>
-        <span>{firm.address}</span>
+        <span><a href={firm.mapsLink} target="_blank" rel="noreferrer">{firm.address}</a></span>
         <a href={firm.phoneLink}>{firm.phoneDisplay}</a>
       </div>
       <header className={styles.header}>

@@ -4,6 +4,8 @@ export const firm = {
   phoneDisplay: "+91 98841 23673",
   phoneLink: "tel:+919884123673",
   address: "Spencer Plaza, Shop G-90, Ground Floor, Phase-II, 769 Anna Salai, Chennai 600 002",
+  mapsLink: "https://www.google.com/maps/search/?api=1&query=GD+Thiru+%26+Co.+Spencer+Plaza+Anna+Salai+Chennai+600002",
+  directionsLink: "https://www.google.com/maps/dir/?api=1&destination=Spencer+Plaza+Anna+Salai+Chennai+600002",
   hours: "Monday – Saturday, 9:00 AM – 7:30 PM",
   badges: ["SRA Regulated", "Member, Law Society of England & Wales", "Chennai, India"],
 };
@@ -77,9 +79,9 @@ export const images = {
 };
 
 export const destinations = [
-  { img: "statueOfLiberty", place: "New York", note: "Statue of Liberty — the classic first sight of America" },
-  { img: "goldenGate", place: "San Francisco", note: "Golden Gate — the West Coast gateway" },
-  { img: "supremeCourt", place: "Washington, D.C.", note: "U.S. Supreme Court — the law of the land" },
+  { img: "statueOfLiberty", place: "New York", note: "Statue of Liberty — the classic first sight of America", maps: "https://www.google.com/maps/search/?api=1&query=New+York+City+USA" },
+  { img: "goldenGate", place: "San Francisco", note: "Golden Gate — the West Coast gateway", maps: "https://www.google.com/maps/search/?api=1&query=San+Francisco+USA" },
+  { img: "supremeCourt", place: "Washington, D.C.", note: "U.S. Supreme Court — the law of the land", maps: "https://www.google.com/maps/search/?api=1&query=Washington+DC+USA" },
 ];
 
 export const practiceDetail = {

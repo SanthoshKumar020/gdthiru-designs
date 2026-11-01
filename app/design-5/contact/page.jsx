@@ -28,7 +28,7 @@ export default function Contact() {
         <div className={styles.whyGrid}>
           <article>
             <h3>Visit the office</h3>
-            <p>{firm.address}</p>
+            <p><a href={firm.mapsLink} target="_blank" rel="noreferrer">{firm.address}</a></p>
           </article>
           <article>
             <h3>Call us</h3>
@@ -47,7 +47,7 @@ export default function Contact() {
             style={{ width: "100%", height: 360, border: 0 }}
             loading="lazy"
           />
-          <p style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: 13, color: "#777" }}>Spencer Plaza, Anna Salai, Chennai — view larger map on OpenStreetMap.</p>
+          <p style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: 13, color: "#777" }}><a href={firm.directionsLink} target="_blank" rel="noreferrer">Get directions on Google Maps →</a></p>
         </div>
       </section>
       <section className={styles.closing}>

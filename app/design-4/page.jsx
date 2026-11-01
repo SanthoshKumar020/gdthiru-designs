@@ -116,10 +116,10 @@ export default function Design4() {
         <p className={styles.sectionSub}>From Chennai to America — the destinations our clients dream about.</p>
         <div className={styles.strip}>
           {destinations.map((d) => (
-            <figure key={d.place} className="imgHover">
+            <a key={d.place} href={d.maps} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
               <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
               <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
-            </figure>
+            </figure></a>
           ))}
         </div>
       </section>

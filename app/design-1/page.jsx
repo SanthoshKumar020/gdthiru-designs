@@ -106,10 +106,10 @@ export default function Design1() {
         <h2>From Chennai to America</h2>
         <div className={styles.strip}>
           {destinations.map((d) => (
-            <figure key={d.place} className="imgHover">
+            <a key={d.place} href={d.maps} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
               <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
               <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
-            </figure>
+            </figure></a>
           ))}
         </div>
       </section>
