@@ -1,5 +1,6 @@
 import styles from "./design.module.css";
-import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs } from "../content";
+import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 4 — Professional Blue | GD Thiru & Co." };
 
@@ -21,6 +22,8 @@ export default function Design4() {
       </header>
 
       <section className={styles.hero}>
+        <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.statueOfLiberty.src} alt={images.statueOfLiberty.alt} />
+        <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <h1>{hero.title}</h1>
           <p>{hero.sub}</p>
@@ -97,6 +100,19 @@ export default function Design4() {
               <h3>{f.q}</h3>
               <p>{f.a}</p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Where our clients go</h2>
+        <p className={styles.sectionSub}>From Chennai to America — the destinations our clients dream about.</p>
+        <div className={styles.strip}>
+          {destinations.map((d) => (
+            <figure key={d.place} className="imgHover">
+              <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
+              <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
+            </figure>
           ))}
         </div>
       </section>

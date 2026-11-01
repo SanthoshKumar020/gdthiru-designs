@@ -1,5 +1,6 @@
 import styles from "./design.module.css";
-import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs } from "../content";
+import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 1 — Classic | GD Thiru & Co." };
 
@@ -27,16 +28,20 @@ export default function Design1() {
       </header>
 
       <section className={styles.hero}>
-        <p className={styles.heroEyebrow}>Chennai · United Kingdom · United States</p>
-        <h1>{hero.title}</h1>
-        <div className={styles.rule} />
-        <p className={styles.heroSub}>{hero.sub}</p>
-        <div className={styles.heroCtas}>
-          <a className={styles.btnGold} href="#contact">{hero.cta}</a>
-          <a className={styles.btnGhost} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
-        </div>
-        <div className={styles.badges}>
-          {firm.badges.map((b) => <span key={b}>{b}</span>)}
+        <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.supremeCourt.src} alt={images.supremeCourt.alt} />
+        <div className={styles.heroOverlay} />
+        <div className={styles.heroContent}>
+          <p className={styles.heroEyebrow}>Chennai · United Kingdom · United States</p>
+          <h1>{hero.title}</h1>
+          <div className={styles.rule} />
+          <p className={styles.heroSub}>{hero.sub}</p>
+          <div className={styles.heroCtas}>
+            <a className={styles.btnGold} href="#contact">{hero.cta}</a>
+            <a className={styles.btnGhost} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
+          </div>
+          <div className={styles.badges}>
+            {firm.badges.map((b) => <span key={b}>{b}</span>)}
+          </div>
         </div>
       </section>
 
@@ -100,6 +105,19 @@ export default function Design1() {
               <h3>{f.q}</h3>
               <p>{f.a}</p>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <p className={styles.eyebrow}>Where our clients go</p>
+        <h2>From Chennai to America</h2>
+        <div className={styles.strip}>
+          {destinations.map((d) => (
+            <figure key={d.place} className="imgHover">
+              <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
+              <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
+            </figure>
           ))}
         </div>
       </section>

@@ -1,0 +1,50 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll-reveal: sections start hidden only once JS is running, so content
+   is never invisible if JS fails. */
+html.js-scroll section {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+html.js-scroll section.inview {
+  opacity: 1;
+  transform: none;
+}
+
+/* Slow zoom on hero images (Ken Burns entrance). */
+@keyframes heroZoom {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.heroImgAnim {
+  animation: heroZoom 2.4s ease-out forwards;
+}
+
+/* Gentle image zoom on hover for strips and cards. */
+.imgHover {
+  overflow: hidden;
+}
+.imgHover img {
+  transition: transform 0.6s ease;
+}
+.imgHover:hover img {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-scroll section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .heroImgAnim {
+    animation: none;
+  }
+}

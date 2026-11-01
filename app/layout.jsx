@@ -1,3 +1,6 @@
+import ScrollAnimations from "./components/ScrollAnimations";
+import "./reveal.css";
+
 export const metadata = {
   title: "GD Thiru & Co. — Website Designs",
   description: "Five homepage design options for GD Thiru & Co., Advocates & Solicitors, Chennai.",
@@ -6,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0 }}>{children}</body>
+      <body style={{ margin: 0 }}>
+        <ScrollAnimations />
+        {children}
+      </body>
     </html>
   );
 }

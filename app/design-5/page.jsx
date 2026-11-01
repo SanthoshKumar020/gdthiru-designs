@@ -1,5 +1,6 @@
 import styles from "./design.module.css";
-import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs } from "../content";
+import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 5 — Editorial | GD Thiru & Co." };
 
@@ -21,6 +22,10 @@ export default function Design5() {
       <section className={styles.hero}>
         <p className={styles.kicker}>Immigration Law — United Kingdom · United States</p>
         <h1>{hero.title}</h1>
+        <figure className={`${styles.heroFigure} imgHover`}>
+          <SafeImg className="heroImgAnim" src={images.nycSkyline.src} alt={images.nycSkyline.alt} />
+          <figcaption>New York City — where many of our clients begin their American story.</figcaption>
+        </figure>
         <div className={styles.heroRow}>
           <p>{hero.sub}</p>
           <div>
@@ -105,8 +110,21 @@ export default function Design5() {
         </div>
       </section>
 
-      <section id="contact" className={styles.closing}>
+      <section className={styles.section}>
         <p className={styles.secNum}>06</p>
+        <h2>Where Our Clients Go</h2>
+        <div className={styles.strip}>
+          {destinations.map((d) => (
+            <figure key={d.place} className="imgHover">
+              <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
+              <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className={styles.closing}>
+        <p className={styles.secNum}>07</p>
         <h2>Start with a consultation.</h2>
         <p>{firm.address}</p>
         <p>{firm.hours}</p>

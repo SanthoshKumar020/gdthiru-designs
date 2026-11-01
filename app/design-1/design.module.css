@@ -64,9 +64,26 @@
   text-decoration: none;
 }
 .hero {
+  position: relative;
+  overflow: hidden;
   background: #0f2a4a;
   color: #fff;
   text-align: center;
+}
+.heroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 42, 74, 0.78);
+}
+.heroContent {
+  position: relative;
   padding: 72px 5vw 64px;
 }
 .heroEyebrow {
@@ -296,6 +313,34 @@
   padding: 32px 5vw;
   font-size: 14px;
   line-height: 1.7;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.strip figure {
+  margin: 0;
+  border: 1px solid #ddd;
+}
+.strip img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.strip figcaption {
+  padding: 14px 16px;
+}
+.strip figcaption strong {
+  display: block;
+  color: #0f2a4a;
+  font-size: 17px;
+}
+.strip figcaption span {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
 }
 .footer strong {
   color: #e8c766;
