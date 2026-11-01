@@ -23,6 +23,7 @@ export default function Nav() {
 
   const dropPanel = dropOpen && (
     <div className="dropPanel">
+      <div className="dropPanelInner">
       <div className="dropGroup">
         <h4>UK visas</h4>
         {ukVisas.map((r) => (
@@ -51,6 +52,7 @@ export default function Nav() {
         <Link href={`${base}/practice-areas`} onClick={() => setDropOpen(false)}>
           View all practice areas →
         </Link>
+      </div>
       </div>
     </div>
   );
@@ -132,7 +134,7 @@ export default function Nav() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={`${styles.header} menuAnchor`}>
         <Link className={styles.brand} href="/design-2" style={{ textDecoration: "none", color: "inherit" }}>
           <span className={styles.logo}>
             GD THIRU <em>&amp; CO</em>

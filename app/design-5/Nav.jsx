@@ -23,6 +23,7 @@ export default function Nav() {
 
   const dropPanel = dropOpen && (
     <div className="dropPanel">
+      <div className="dropPanelInner">
       <div className="dropGroup">
         <h4>UK visas</h4>
         {ukVisas.map((r) => (
@@ -51,6 +52,7 @@ export default function Nav() {
         <Link href={`${base}/practice-areas`} onClick={() => setDropOpen(false)}>
           View all practice areas →
         </Link>
+      </div>
       </div>
     </div>
   );
@@ -146,7 +148,7 @@ export default function Nav() {
           </button>
         </span>
       </header>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} menuAnchor`}>
         <Link href="/design-5" className={pathname === "/design-5" ? styles.active : ""}>
           Home
         </Link>
