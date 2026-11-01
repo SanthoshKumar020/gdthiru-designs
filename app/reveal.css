@@ -2,64 +2,135 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Scroll-reveal: sections start hidden only once JS is running, so content
-   is never invisible if JS fails. */
+/* ─────────────────────────────────────────────
+   Scroll reveal system
+   Sections start hidden only when JS is active
+───────────────────────────────────────────── */
 html.js-scroll section {
   opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(32px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 html.js-scroll section.inview {
   opacity: 1;
   transform: none;
 }
 
-/* Slow zoom on hero images (Ken Burns entrance). */
-@keyframes heroZoom {
-  from {
-    transform: scale(1.12);
-  }
+/* Staggered children inside revealed sections */
+html.js-scroll section.inview .stagger > * {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: staggerIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+html.js-scroll section.inview .stagger > *:nth-child(1) { animation-delay: 0.05s; }
+html.js-scroll section.inview .stagger > *:nth-child(2) { animation-delay: 0.12s; }
+html.js-scroll section.inview .stagger > *:nth-child(3) { animation-delay: 0.19s; }
+html.js-scroll section.inview .stagger > *:nth-child(4) { animation-delay: 0.26s; }
+html.js-scroll section.inview .stagger > *:nth-child(5) { animation-delay: 0.33s; }
+html.js-scroll section.inview .stagger > *:nth-child(6) { animation-delay: 0.40s; }
+html.js-scroll section.inview .stagger > *:nth-child(7) { animation-delay: 0.47s; }
+html.js-scroll section.inview .stagger > *:nth-child(8) { animation-delay: 0.54s; }
+
+@keyframes staggerIn {
   to {
-    transform: scale(1);
+    opacity: 1;
+    transform: none;
   }
 }
+
+/* ─────────────────────────────────────────────
+   Hero animations
+───────────────────────────────────────────── */
+@keyframes heroZoom {
+  from { transform: scale(1.14); }
+  to   { transform: scale(1); }
+}
+
 .heroImgAnim {
-  animation: heroZoom 2.4s ease-out forwards;
+  animation: heroZoom 2.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Gentle image zoom on hover for strips and cards. */
-.imgHover {
-  overflow: hidden;
-}
-.imgHover img {
-  transition: transform 0.6s ease;
-}
-.imgHover:hover img {
-  transform: scale(1.06);
-}
-
-/* Hero text entrance. */
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
     transform: none;
   }
 }
+
 .heroTextAnim {
-  animation: fadeUp 0.9s ease both;
+  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.heroTextAnim > * {
+  opacity: 0;
+  animation: fadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.heroTextAnim > *:nth-child(1) { animation-delay: 0.15s; }
+.heroTextAnim > *:nth-child(2) { animation-delay: 0.28s; }
+.heroTextAnim > *:nth-child(3) { animation-delay: 0.40s; }
+.heroTextAnim > *:nth-child(4) { animation-delay: 0.52s; }
+.heroTextAnim > *:nth-child(5) { animation-delay: 0.64s; }
+.heroTextAnim > *:nth-child(6) { animation-delay: 0.76s; }
+
+/* ─────────────────────────────────────────────
+   Image hover polish
+───────────────────────────────────────────── */
+.imgHover {
+  overflow: hidden;
+}
+
+.imgHover img {
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.imgHover:hover img {
+  transform: scale(1.07);
+}
+
+/* ─────────────────────────────────────────────
+   Subtle float / pulse for CTAs (optional class)
+───────────────────────────────────────────── */
+@keyframes softPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); }
+  50%      { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18); }
+}
+
+.ctaPulse {
+  animation: softPulse 3s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Reduced motion
+───────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   html.js-scroll section {
     opacity: 1;
     transform: none;
     transition: none;
   }
-  .heroImgAnim {
+  html.js-scroll section.inview .stagger > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .heroImgAnim,
+  .heroTextAnim,
+  .heroTextAnim > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .ctaPulse {
     animation: none;
   }
 }

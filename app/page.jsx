@@ -2,11 +2,36 @@ import Link from "next/link";
 import "./globals.css";
 
 const designs = [
-  { n: 1, name: "Classic", style: "Navy & gold, traditional law firm", desc: "Serif headlines, gold rules, formal and authoritative. The safe, classic choice for a law firm." },
-  { n: 2, name: "Clean", style: "Light & modern, bold hero", desc: "White space, one strong accent colour, clear cards. Confident and easy to read on a phone." },
-  { n: 3, name: "Premium Dark", style: "Dark charcoal & gold, heritage feel", desc: "Dark, elegant and expensive-looking. Suits a firm that wants to feel established and exclusive." },
-  { n: 4, name: "Professional Blue", style: "Trust blue, consultation-first", desc: "Blue throughout, enquiry buttons everywhere, built to turn visitors into consultation calls." },
-  { n: 5, name: "Editorial", style: "Minimal, magazine layout", desc: "Lots of white space, big serif headlines, numbered sections. Quiet, refined, modern." },
+  {
+    n: 1,
+    name: "Classic",
+    style: "Navy & gold · Traditional law firm",
+    desc: "Serif headlines, gold rules, formal and authoritative. The safe, classic choice that signals trust and heritage.",
+  },
+  {
+    n: 2,
+    name: "Clean",
+    style: "Light & modern · Bold hero",
+    desc: "Generous white space, one strong accent colour, clear cards. Confident and effortless on every screen size.",
+  },
+  {
+    n: 3,
+    name: "Premium Dark",
+    style: "Charcoal & gold · Heritage feel",
+    desc: "Dark, elegant and exclusive. Designed for a firm that wants to feel established and high-end from the first glance.",
+  },
+  {
+    n: 4,
+    name: "Professional Blue",
+    style: "Trust blue · Consultation-first",
+    desc: "Blue throughout, clear CTAs, built to convert visitors into consultation calls with clarity and confidence.",
+  },
+  {
+    n: 5,
+    name: "Editorial",
+    style: "Minimal · Magazine layout",
+    desc: "Lots of white space, large serif headlines, numbered sections. Quiet, refined, and distinctly modern.",
+  },
 ];
 
 export default function Hub() {
@@ -15,8 +40,8 @@ export default function Hub() {
       <p className="hubEyebrow">GD Thiru &amp; Co. — Advocates &amp; Solicitors, Chennai</p>
       <h1>Website design options</h1>
       <p className="hubSub">
-        Five different homepage styles for the new website, built with the firm&apos;s content.
-        Open any design, pick the one you like, and that style becomes the full website.
+        Five carefully crafted homepage directions for the new site, using the firm&apos;s real content.
+        Open any design, experience the full flow, and choose the style that best represents the practice.
       </p>
       <div className="hubGrid">
         {designs.map((d) => (
@@ -25,17 +50,18 @@ export default function Hub() {
             <h2>{d.name}</h2>
             <p className="hubStyle">{d.style}</p>
             <p>{d.desc}</p>
-            <span className="hubLink">Open design {d.n} →</span>
+            <span className="hubLink">
+              Open design {d.n}
+              <span aria-hidden="true"> →</span>
+            </span>
           </Link>
         ))}
       </div>
       <p className="hubNote">
         Content note: practice areas follow the firm&apos;s own list from gdthiru.com, with
-        scrapped UK visa categories (Tier 1, Tier 2, Tier 4, Tier 5, EEA) updated to their
-        current routes. The testimonial is the firm&apos;s real client testimonial from
-        gdthiru.com. US routes are shown as options for the firm to confirm. Images are web
-        photos used as mockups — the final site should use licensed photos or the firm&apos;s
-        own photos.
+        retired UK visa categories updated to current routes. The testimonial is a real client
+        quote from the firm&apos;s site. US routes are presented as options for confirmation.
+        Images are stock mockups — the final site should use licensed or firm-owned photography.
       </p>
     </main>
   );
