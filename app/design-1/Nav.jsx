@@ -24,13 +24,13 @@ export default function Nav() {
         <a href={firm.phoneLink}>{firm.phoneDisplay}</a>
       </div>
       <header className={styles.header}>
-        <div className={styles.brand}>
+        <Link className={styles.brand} href="/design-1" style={{ textDecoration: "none", color: "inherit" }}>
           <span className={styles.monogram}>GT</span>
           <span>
             <strong>{firm.name}</strong>
             <small>{firm.tagline}</small>
           </span>
-        </div>
+        </Link>
         <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           {open ? "✕" : "☰"}
         </button>
@@ -42,6 +42,7 @@ export default function Nav() {
           ))}
         </nav>
       </header>
+      <a className={styles.callBar} href={firm.phoneLink}>📞 Call {firm.phoneDisplay}</a>
     </>
   );
 }

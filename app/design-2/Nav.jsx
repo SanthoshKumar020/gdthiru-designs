@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./design.module.css";
+import { firm } from "../content";
 
 const links = [
   { href: "/design-2", label: "Home" },
@@ -17,10 +18,11 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   return (
+    <>
     <header className={styles.header}>
-      <div className={styles.brand}>
-        <span className={styles.logo}>GD Thiru <em>&amp; Co.</em></span>
-      </div>
+      <Link className={styles.brand} href="/design-2" style={{ textDecoration: "none", color: "inherit" }}>
+        <span className={styles.logo}>GD THIRU <em>&amp; CO</em></span>
+      </Link>
       <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
         {open ? "✕" : "☰"}
       </button>
@@ -35,5 +37,7 @@ export default function Nav() {
         </Link>
       </nav>
     </header>
+    <a className={styles.callBar} href={firm.phoneLink}>📞 Call {firm.phoneDisplay}</a>
+    </>
   );
 }

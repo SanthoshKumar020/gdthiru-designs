@@ -18,8 +18,9 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   return (
+    <>
     <header className={styles.header}>
-      <span className={styles.brand}>{firm.name}</span>
+      <Link className={styles.brand} href="/design-3" style={{ textDecoration: "none", color: "inherit" }}>{firm.name}</Link>
       <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
         {open ? "✕" : "☰"}
       </button>
@@ -31,5 +32,7 @@ export default function Nav() {
         ))}
       </nav>
     </header>
+    <a className={styles.callBar} href={firm.phoneLink}>📞 Call {firm.phoneDisplay}</a>
+    </>
   );
 }

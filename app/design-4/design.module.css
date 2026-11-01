@@ -459,6 +459,47 @@
 .footer a {
   color: inherit;
 }
+
+/* Award-style signature treatments (v6) */
+.section h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: #f59e0b;
+  margin-top: 12px;
+}
+.heroImage img {
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(30, 64, 175, 0.2);
+}
+.card {
+  border-left: 4px solid #f59e0b;
+}
+.callBar {
+  display: none;
+}
+@media (max-width: 820px) {
+  :global(body) {
+    padding-bottom: 76px;
+  }
+  .callBar {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 50;
+    text-align: center;
+    background: #f59e0b;
+    color: #1e293b;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
 .pageHero h1 {
   font-size: 40px;
   margin: 0 0 12px;

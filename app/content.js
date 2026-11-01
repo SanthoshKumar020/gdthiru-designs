@@ -1,5 +1,5 @@
 export const firm = {
-  name: "GD Thiru & Co.",
+  name: "GD THIRU & CO",
   tagline: "Advocates & Solicitors",
   phoneDisplay: "+91 98841 23673",
   phoneLink: "tel:+919884123673",

@@ -21,7 +21,7 @@ export default function Nav() {
     <>
       <header className={styles.header}>
         <span className={styles.date}>Chennai, India</span>
-        <span className={styles.brand}>{firm.name}</span>
+        <Link className={styles.brand} href="/design-5" style={{ textDecoration: "none", color: "inherit" }}>{firm.name}</Link>
         <span className={styles.headerRight}>
           <a href={firm.phoneLink}>{firm.phoneDisplay}</a>
           <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
@@ -36,6 +36,7 @@ export default function Nav() {
           </Link>
         ))}
       </nav>
+      <a className={styles.callBar} href={firm.phoneLink}>📞 Call {firm.phoneDisplay}</a>
     </>
   );
 }

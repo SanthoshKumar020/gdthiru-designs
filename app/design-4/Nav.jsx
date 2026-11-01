@@ -20,7 +20,7 @@ export default function Nav() {
   return (
     <>
       <header className={styles.header}>
-        <span className={styles.brand}>{firm.name} <small>{firm.tagline}</small></span>
+        <Link className={styles.brand} href="/design-4" style={{ textDecoration: "none", color: "inherit" }}>{firm.name} <small>{firm.tagline}</small></Link>
         <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           {open ? "✕" : "☰"}
         </button>
@@ -33,6 +33,7 @@ export default function Nav() {
           </Link>
         ))}
       </nav>
+      <a className={styles.callBar} href={firm.phoneLink}>📞 Call {firm.phoneDisplay}</a>
     </>
   );
 }
