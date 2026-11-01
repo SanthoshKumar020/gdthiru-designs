@@ -39,6 +39,13 @@ export default function Design3() {
               key={p.title}
               name={p.title}
               description={`${p.code} · ${p.desc}`}
+              background={
+                i === 0 ? (
+                  <div className="-m-6 mb-4">
+                    <img src={images.supremeCourt.src} alt={images.supremeCourt.alt} className="h-60 w-full object-cover" loading="lazy" />
+                  </div>
+                ) : undefined
+              }
               href="/design-3/practice-areas"
               cta="Explore routes"
               className={

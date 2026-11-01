@@ -1,7 +1,7 @@
 export const firm = {
   name: "GD THIRU & CO",
   tagline: "Advocates & Solicitors",
-  phoneDisplay: "+91 98841 23673",
+  phoneDisplay: "+91 9884123673",
   phoneLink: "tel:+919884123673",
   email: "gdthiru@gmail.com",
   landline: "044-28172118",
