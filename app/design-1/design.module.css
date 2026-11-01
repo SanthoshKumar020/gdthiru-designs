@@ -1,0 +1,329 @@
+.page {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1c2430;
+  background: #ffffff;
+}
+.topbar {
+  background: #0f2a4a;
+  color: #d8dee8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 5vw;
+}
+.topbar a {
+  color: #e8c766;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5vw;
+  border-bottom: 3px double #c9a227;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #c9a227;
+  color: #0f2a4a;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.brand strong {
+  display: block;
+  font-size: 24px;
+  color: #0f2a4a;
+}
+.brand small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+}
+.nav {
+  display: flex;
+  gap: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.nav a {
+  color: #0f2a4a;
+  text-decoration: none;
+}
+.hero {
+  background: #0f2a4a;
+  color: #fff;
+  text-align: center;
+  padding: 72px 5vw 64px;
+}
+.heroEyebrow {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e8c766;
+  margin: 0 0 20px;
+}
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  max-width: 760px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+.rule {
+  width: 64px;
+  height: 2px;
+  background: #c9a227;
+  margin: 28px auto;
+}
+.heroSub {
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 620px;
+  margin: 0 auto 32px;
+  color: #d8dee8;
+}
+.heroCtas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btnGold {
+  display: inline-block;
+  background: #c9a227;
+  color: #0f2a4a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 14px 28px;
+  text-decoration: none;
+}
+.btnGhost {
+  display: inline-block;
+  border: 1px solid #e8c766;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 14px 28px;
+  text-decoration: none;
+}
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.badges span {
+  border: 1px solid rgba(232, 199, 102, 0.5);
+  color: #e8c766;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 8px 14px;
+}
+.section {
+  padding: 64px 5vw;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.sectionAlt {
+  background: #f5f1e6;
+  padding: 64px 5vw;
+}
+.sectionAlt h2,
+.section h2 {
+  font-size: 34px;
+  font-weight: normal;
+  margin: 8px 0 32px;
+  color: #0f2a4a;
+}
+.sectionAlt > *,
+.section > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.eyebrow {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8a6d1b;
+  margin: 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 24px;
+}
+.cardCode {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #0f2a4a;
+  padding: 4px 10px;
+}
+.card h3 {
+  font-size: 21px;
+  margin: 16px 0 8px;
+  color: #0f2a4a;
+}
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+.more {
+  font-style: italic;
+  color: #666;
+  margin-top: 24px;
+}
+.whyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.whyGrid h3 {
+  font-size: 20px;
+  color: #0f2a4a;
+  margin: 0 0 8px;
+}
+.whyGrid p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.stepNum {
+  font-size: 40px;
+  color: #c9a227;
+}
+.steps h3 {
+  font-size: 19px;
+  color: #0f2a4a;
+  margin: 8px 0;
+}
+.steps p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+.quotes {
+  background: #0f2a4a;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 56px 5vw;
+}
+.quotes blockquote {
+  margin: 0;
+}
+.quotes p {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.6;
+}
+.quotes cite {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  color: #e8c766;
+}
+.faqs {
+  display: grid;
+  gap: 20px;
+}
+.faqs h3 {
+  font-size: 19px;
+  color: #0f2a4a;
+  margin: 0 0 6px;
+}
+.faqs p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+.cta {
+  background: #c9a227;
+  text-align: center;
+  padding: 56px 5vw;
+  color: #0f2a4a;
+}
+.cta h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 8px;
+}
+.cta p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 0 24px;
+}
+.cta .btnGold {
+  background: #0f2a4a;
+  color: #fff;
+}
+.footer {
+  background: #0a1d33;
+  color: #d8dee8;
+  text-align: center;
+  padding: 32px 5vw;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.footer strong {
+  color: #e8c766;
+}
+@media (max-width: 820px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .quotes {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 520px) {
+  .cards,
+  .whyGrid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .topbar span {
+    display: none;
+  }
+}
