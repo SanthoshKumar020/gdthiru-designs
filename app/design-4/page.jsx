@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import FlightPath from "../components/FlightPath";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 4 — Professional Blue | GD Thiru & Co." };
@@ -33,6 +34,8 @@ export default function Design4() {
           <p className={styles.heroHours}>{firm.hours} · {firm.address}</p>
         </div>
       </section>
+
+      <FlightPath className={styles.journey} />
 
       <EnquiryBar />
 

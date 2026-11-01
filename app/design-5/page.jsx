@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import FlightPath from "../components/FlightPath";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 5 — Editorial | GD Thiru & Co." };
@@ -26,6 +27,8 @@ export default function Design5() {
           </div>
         </div>
       </section>
+
+      <FlightPath className={styles.journey} />
 
       <section id="practice" className={styles.section}>
         <p className={styles.secNum}>01</p>

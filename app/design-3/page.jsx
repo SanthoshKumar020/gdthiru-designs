@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import FlightPath from "../components/FlightPath";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 3 — Premium Dark | GD Thiru & Co." };
@@ -24,6 +25,8 @@ export default function Design3() {
           </div>
         </div>
       </section>
+
+      <FlightPath className={styles.journey} />
 
       <div className={styles.goldLine} />
 

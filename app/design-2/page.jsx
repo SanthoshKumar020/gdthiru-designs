@@ -2,6 +2,7 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
+import FlightPath from "../components/FlightPath";
 import SafeImg from "../components/SafeImg";
 
 export const metadata = { title: "Design 2 — Clean | GD Thiru & Co." };
@@ -30,6 +31,8 @@ export default function Design2() {
           </div>
         </div>
       </section>
+
+      <FlightPath className={styles.journey} />
 
       <section id="practice" className={styles.section}>
         <div className={styles.sectionHead}>

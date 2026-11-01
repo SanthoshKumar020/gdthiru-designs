@@ -23,7 +23,7 @@ export default function Nav() {
         <span className={styles.date}>Chennai, India</span>
         <Link className={styles.brand} href="/design-5" style={{ textDecoration: "none", color: "inherit" }}>{firm.name}</Link>
         <span className={styles.headerRight}>
-          <a href={firm.phoneLink}>{firm.phoneDisplay}</a>
+          <a className={styles.headerCall} href={firm.phoneLink}>{firm.phoneDisplay}</a>
           <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
             {open ? "✕" : "☰"}
           </button>
