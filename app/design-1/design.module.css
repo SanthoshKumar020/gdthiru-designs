@@ -629,6 +629,7 @@
 .page > footer,
 .page > div {
   width: 100%;
+  box-sizing: border-box;
 }
 /* v11.6: tagline slimmer on narrow phones so brand + icon fit one row */
 @media (max-width: 520px) {

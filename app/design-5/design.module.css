@@ -581,4 +581,5 @@
 .page > footer,
 .page > div {
   width: 100%;
+  box-sizing: border-box;
 }
