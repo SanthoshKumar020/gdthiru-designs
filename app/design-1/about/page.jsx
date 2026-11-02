@@ -1,44 +1,10 @@
 import styles from "../design.module.css";
 import Nav from "../Nav";
 import Footer from "../Footer";
-import { firm, aboutText, whyUs } from "../../content";
+import { FirmAbout } from "../../components/FirmPages";
 
 export const metadata = { title: "About the Firm | GD Thiru & Co." };
 
 export default function About() {
-  return (
-    <div className={styles.page}>
-      <Nav />
-      <section className={styles.pageHero}>
-        <h1>About the Firm</h1>
-        <p>A Chennai law firm for UK and US immigration — regulated, plain-spoken, careful.</p>
-      </section>
-      <section className={styles.section}>
-        {aboutText.map((t) => (
-          <p key={t.slice(0, 24)} style={{ fontSize: 17, lineHeight: 1.7, color: "#444" }}>{t}</p>
-        ))}
-        <div className={styles.badges} style={{ marginTop: 28 }}>
-          {firm.badges.map((b) => <span key={b}>{b}</span>)}
-        </div>
-      </section>
-      <section className={styles.sectionAlt}>
-        <p className={styles.eyebrow}>Why GD Thiru &amp; Co.</p>
-        <h2>How we work</h2>
-        <div className={styles.whyGrid}>
-          {whyUs.map((w) => (
-            <article key={w.title}>
-              <h3>{w.title}</h3>
-              <p>{w.desc}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className={styles.cta}>
-        <h2>Start with a consultation</h2>
-        <p>{firm.hours}</p>
-        <a className={styles.btnGold} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
-      </section>
-      <Footer />
-    </div>
-  );
+  return <div className={styles.page}><Nav /><FirmAbout design="1" /><Footer /></div>;
 }

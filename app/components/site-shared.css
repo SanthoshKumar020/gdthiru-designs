@@ -1,5 +1,35 @@
 /* v11 shared menu + practice-page helpers (global classes, used by all 5 designs) */
 
+.official-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+  line-height: 0;
+}
+.official-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.official-logo--1,
+.official-logo--2,
+.official-logo--4 {
+  width: 132px;
+  height: 80px;
+}
+.official-logo--3 {
+  width: 120px;
+  height: 73px;
+}
+.official-logo--5 {
+  width: 112px;
+  height: 68px;
+}
+
 /* "On this page" anchor nav */
 .anchorNav {
   display: flex;
@@ -38,6 +68,7 @@
 /* Desktop Practice Areas dropdown (full-width strip under the header, so no column is ever clipped) */
 .menuAnchor {
   position: relative;
+  z-index: 90;
 }
 .dropWrap {
   display: inline-flex;
@@ -57,19 +88,22 @@
   right: 0;
   top: 100%;
   z-index: 80;
+  max-height: min(72vh, 640px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: #ffffff;
-  color: #1a1a1a;
+  color: #172335;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
   border-top: 1px solid #eeeeee;
-  padding: 16px 5vw;
+  padding: 20px 5vw 16px;
   text-align: left;
 }
 .dropPanelInner {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 .dropGroupWide {
   grid-column: span 2;
@@ -80,35 +114,73 @@
   gap: 20px;
 }
 .dropGroup h4 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #666666;
+  color: #596579;
   font-family: Arial, Helvetica, sans-serif;
 }
-.dropGroup a {
+.dropPanel .dropGroup a {
   display: block;
-  padding: 6px 0;
+  width: fit-content;
+  max-width: 100%;
+  padding: 7px 4px;
+  border-radius: 3px;
+  color: #172335;
   font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
-  color: #1a1a1a;
-  line-height: 1.4;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
-.dropGroup a:hover {
+.dropPanel .dropGroup a:hover,
+.dropPanel .dropGroup a:focus-visible {
+  background: #edf2f8;
+  color: #0f2a49;
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .dropFoot {
   grid-column: 1 / -1;
   border-top: 1px solid #eeeeee;
-  padding-top: 10px;
+  padding-top: 14px;
 }
-.dropFoot a {
+.dropPanel .dropFoot a {
   font-weight: bold;
   text-decoration: none;
-  color: #1a1a1a;
+  color: #173c70;
+  line-height: 1.5;
+}
+.dropPanel .dropFoot a:hover,
+.dropPanel .dropFoot a:focus-visible {
+  color: #0b2550;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 1100px) and (min-width: 821px) {
+  .dropPanelInner {
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 0.45fr);
+    gap: 16px 24px;
+  }
+  .dropGroupWide {
+    grid-column: 1 / -1;
+  }
+  .dropCols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media (max-width: 820px) {
+  .official-logo--1,
+  .official-logo--2,
+  .official-logo--3,
+  .official-logo--4,
+  .official-logo--5 {
+    width: 100px;
+    height: 61px;
+  }
+
   .dropPanel {
     display: none;
   }

@@ -15,8 +15,8 @@ export default function Hub() {
       <p className="hubEyebrow">GD Thiru &amp; Co. — Advocates &amp; Solicitors, Chennai</p>
       <h1>Website design options</h1>
       <p className="hubSub">
-        Five different homepage styles for the new website, built with the firm&apos;s content.
-        Open any design, pick the one you like, and that style becomes the full website.
+        Explore five distinct directions for the complete firm website, including practice
+        areas, about, FAQ and contact pages. Each option keeps its own visual identity throughout.
       </p>
       <div className="hubGrid">
         {designs.map((d) => (
@@ -30,12 +30,9 @@ export default function Hub() {
         ))}
       </div>
       <p className="hubNote">
-        Content note: practice areas follow the firm&apos;s own list from gdthiru.com, with
-        scrapped UK visa categories (Tier 1, Tier 2, Tier 4, Tier 5, EEA) updated to their
-        current routes. The testimonial is the firm&apos;s real client testimonial from
-        gdthiru.com. US routes are shown as options for the firm to confirm. Images are web
-        photos used as mockups — the final site should use licensed photos or the firm&apos;s
-        own photos.
+        The existing firm website describes a practice specializing in UK immigration.
+        These previews focus on the UK services listed there. Photography is illustrative
+        and should be approved for final publication.
       </p>
     </main>
   );

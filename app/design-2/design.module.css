@@ -493,7 +493,7 @@
 }
 @media (max-width: 820px) {
   .footer {
-    padding-bottom: 84px;
+    padding-bottom: 144px;
   }
   .callBar {
     display: block;
@@ -619,4 +619,14 @@
 .page > div {
   width: 100%;
   box-sizing: border-box;
+}
+
+.page :global(.scrollRevealItem) {
+  translate: 0 18px;
+}
+.page .card:global(.scrollRevealItem) {
+  scale: 0.98;
+}
+.page .card:global(.scrollRevealItem.inview) {
+  scale: 1;
 }

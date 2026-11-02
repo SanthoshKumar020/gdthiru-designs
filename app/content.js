@@ -3,6 +3,7 @@ export const firm = {
   tagline: "Advocates & Solicitors",
   phoneDisplay: "+91 9884123673",
   phoneLink: "tel:+919884123673",
+  whatsappLink: "https://wa.me/919884123673?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20UK%20immigration%20services.",
   email: "gdthiru@gmail.com",
   landline: "044-28172118",
   landlineLink: "tel:+914428172118",
@@ -14,8 +15,8 @@ export const firm = {
 };
 
 export const hero = {
-  title: "UK & US immigration, handled with care.",
-  sub: "Clear advice, honest timelines, and applications prepared properly, the first time. From Chennai to the UK and the United States.",
+  title: "UK immigration, handled with care.",
+  sub: "Clear advice, honest timelines, and applications prepared properly, the first time. From Chennai, we advise on UK immigration matters.",
   cta: "Book a consultation",
 };
 
@@ -28,13 +29,7 @@ export const practiceAreas = [
   { code: "Citizenship", title: "British Citizenship & Ancestry", desc: "British nationality and citizenship applications, plus Ancestry and Right of Abode claims." },
 ];
 
-export const usAreas = [
-  { code: "US", title: "H-1B Work Visa", desc: "Specialty-occupation petitions for professionals, with employer filings prepared properly.", detail: "We handle the petition, employer filings and evidence, and prepare you for each step of the process." },
-  { code: "US", title: "Family & Spouse Visas", desc: "Spouse, fiance(e) and immediate-relative petitions that keep families together.", detail: "Family cases are personal — we keep you informed at every step and build a file that answers questions before they are asked." },
-  { code: "US", title: "Green Cards & Citizenship", desc: "Permanent residence and naturalisation, from eligibility to interview preparation.", detail: "We map the route, the timeline and the evidence from day one." },
-];
-
-export const moreAreas = "Also covered: UK Visit visas, Temporary Worker routes, EU Settlement Scheme family permits, Overseas Domestic Worker visas, plus US routes — B-1 / B-2 visitors, F-1 students, L-1 transfers, O-1 extraordinary ability and EB categories.";
+export const moreAreas = "Also covered: UK visit and business visitor visas, Temporary Worker routes, EU Settlement Scheme family permits, Overseas Domestic Worker visas, British nationality, Ancestry and Right of Abode.";
 
 export const whyUs = [
   { title: "Regulated & accountable", desc: "A law firm, not an agent. Your case is handled under professional regulation, with client money and data treated properly." },
@@ -52,39 +47,31 @@ export const steps = [
 
 export const images = {
   supremeCourt: {
-    src: "https://thinblueflorida.com/wp-content/uploads/2012/02/SupremeCourtBuilding.jpg",
-    alt: "U.S. Supreme Court building, Washington, D.C.",
+    src: "/images/courthouse.jpg",
+    alt: "Law books and classical busts in a legal library",
   },
   ladyJustice: {
-    src: "https://legalcurated.com/wp-content/uploads/2025/12/lady-justice-statue-front-courthouse-23-2151998148-1-172943-full.webp",
-    alt: "Lady Justice statue in front of a courthouse",
+    src: "/images/legal-books.jpg",
+    alt: "Lady Justice statue holding scales",
   },
   lawyerClient: {
-    src: "https://www.psypost.org/wp-content/uploads/2026/04/lawyer-with-client.jpg",
-    alt: "Lawyer discussing a case with a client",
+    src: "/images/client-consultation.jpg",
+    alt: "A client signing paperwork during a consultation",
   },
   reviewingPapers: {
-    src: "https://www.karblaw.com/assets/img/paralegal-reviewing-papers-with-a-client-wide.webp",
-    alt: "Reviewing application papers with a client",
+    src: "/images/case-documents.jpg",
+    alt: "Carefully reviewing case paperwork at a desk",
   },
-  statueOfLiberty: {
-    src: "https://www.nps.gov/stli/planyourvisit/images/statue-from-boat-NYC-background.jpg?maxwidth=1300&maxheight=1300&autorotate=false&format=webp",
-    alt: "Statue of Liberty, New York",
-  },
-  nycSkyline: {
-    src: "https://screengolfers.gumlet.io/images/cities/usa-new-york-new-york-city.webp?w=3584&q=90",
-    alt: "New York City skyline",
-  },
-  goldenGate: {
-    src: "https://images.squarespace-cdn.com/content/v1/64370e46961f32695027bf88/d590937e-d7a9-4086-a695-4a5db0de68f2/DSC_8464.jpg?format=750w",
-    alt: "Golden Gate Bridge, San Francisco",
+  office: {
+    src: "/images/office.jpg",
+    alt: "Light-filled modern professional office",
   },
 };
 
 export const destinations = [
-  { img: "statueOfLiberty", place: "New York", note: "Statue of Liberty — the classic first sight of America", maps: "https://www.google.com/maps/search/?api=1&query=New+York+City+USA" },
-  { img: "goldenGate", place: "San Francisco", note: "Golden Gate — the West Coast gateway", maps: "https://www.google.com/maps/search/?api=1&query=San+Francisco+USA" },
-  { img: "supremeCourt", place: "Washington, D.C.", note: "U.S. Supreme Court — the law of the land", maps: "https://www.google.com/maps/search/?api=1&query=Washington+DC+USA" },
+  { img: "reviewingPapers", place: "Start with the facts", note: "We understand your history and priorities before discussing the available routes." },
+  { img: "lawyerClient", place: "Build a clear plan", note: "Know what evidence, timings and next steps to expect before anything is filed." },
+  { img: "office", place: "Stay informed", note: "Get practical updates and a direct point of contact as your matter progresses." },
 ];
 
 export const routeSections = [
@@ -251,51 +238,6 @@ export const routeSections = [
       "Covers spouses, partners, children, dependent parents and other dependent relatives.",
     ],
   },
-  {
-    slug: "h-1b",
-    group: "US",
-    code: "US",
-    title: "H-1B Work Visa",
-    answer: "Specialty-occupation petitions for professionals, with employer filings prepared properly.",
-    detail: [
-      "We handle the petition, employer filings and evidence, and prepare you for each step of the process.",
-    ],
-    points: [
-      "Specialty occupation with a US employer.",
-      "Petition, employer filings and evidence prepared properly.",
-      "Prepared for each step of the process.",
-    ],
-  },
-  {
-    slug: "family-spouse",
-    group: "US",
-    code: "US",
-    title: "Family & Spouse Visas",
-    answer: "Spouse, fiancé(e) and immediate-relative petitions that keep families together.",
-    detail: [
-      "Family cases are personal — we keep you informed at every step and build a file that answers questions before they are asked.",
-    ],
-    points: [
-      "Spouse, fiancé(e) and immediate-relative petitions.",
-      "Files built to answer questions before they are asked.",
-      "Kept informed at every step.",
-    ],
-  },
-  {
-    slug: "green-cards",
-    group: "US",
-    code: "US",
-    title: "Green Cards & Citizenship",
-    answer: "Permanent residence and naturalisation, from eligibility to interview preparation.",
-    detail: [
-      "We map the route, the timeline and the evidence from day one.",
-    ],
-    points: [
-      "Permanent residence and naturalisation.",
-      "Route, timeline and evidence mapped from day one.",
-      "Interview preparation included.",
-    ],
-  },
 ];
 
 export const extraFaqs = [
@@ -305,12 +247,10 @@ export const extraFaqs = [
 ];
 
 export const aboutText = [
-  "G D Thiru & Co. is a law firm specializing in UK Immigration Laws, with its head office in Chennai, India. The firm is a member of the Law Society of England & Wales and regulated by the Solicitors Regulation Authority, England.",
-  "The firm has expertise in all aspects of the Points Based System — Tier 1 Entrepreneur and Investor, Tier 2 General and Intra-Company Transfer, Tier 4 Student, Tier 5, settlement, business, Overseas Domestic Worker, ancestry and right of abode visas — as well as appeals, judicial review, administrative reviews and reconsideration applications.",
-  "Its work covers immigration rules and human rights applications — in particular Article 8, the right to private and family life, and Article 3, protection against inhumane and degrading treatment. With an established presence in India, its cross-border, client-focused approach supports local, national and international immigration issues of any complexity.",
-  "The firm is regulated by the Solicitors Regulation Authority and abides by its Code of Conduct and Client Care Charter. It takes client care very seriously and welcomes feedback — every new client is treated as a client for life.",
-  "Immigration cases are personal. Behind every application is a job, a family, or a future that cannot wait. The firm works on one principle: tell clients the truth about their chances, prepare every file carefully, and keep them informed at every step.",
-  "From the Spencer Plaza office on Anna Salai, Chennai, the firm advises individuals and families across India and abroad — on appeals, work visas, student visas, family routes, settlement and citizenship.",
+  "G D Thiru & Co. is a Chennai-based law firm specializing in UK immigration. The firm is regulated by the Solicitors Regulation Authority and is a member of the Law Society of England & Wales.",
+  "Its work includes UK work, student, family, settlement and citizenship routes, as well as appeals and judicial review.",
+  "Immigration cases are personal. Behind every application is a job, a family or a future. The firm aims to explain the available options clearly, prepare each case carefully and keep clients informed throughout.",
+  "From its office at Spencer Plaza on Anna Salai, Chennai, the firm advises individuals and families in India and abroad. Each matter starts with understanding the client's circumstances and the evidence available.",
 ];
 
 export const testimonials = [
@@ -320,5 +260,5 @@ export const testimonials = [
 export const faqs = [
   { q: "How long does a visa application take?", a: "It depends on the route and the consulate. At your consultation we give you the current, realistic timeline for your category." },
   { q: "What if my visa was refused before?", a: "A refusal is not the end. We review the refusal reasons, fix the weak points, and advise whether a fresh application or a review is stronger." },
-  { q: "Do you only handle UK cases?", a: "No. The firm handles UK immigration and US immigration matters, including work, family and student routes." },
+  { q: "What immigration matters does the firm handle?", a: "The firm specializes in UK immigration, including work, study, family, settlement, citizenship, appeals and judicial review matters." },
 ];

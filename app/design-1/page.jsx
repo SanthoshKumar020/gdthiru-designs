@@ -16,7 +16,7 @@ export default function Design1() {
         <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.supremeCourt.src} alt={images.supremeCourt.alt} />
         <div className={styles.heroOverlay} />
         <div className={`${styles.heroContent} heroTextAnim`}>
-          <p className={styles.heroEyebrow}>Chennai · United Kingdom · United States</p>
+          <p className={styles.heroEyebrow}>Chennai · United Kingdom</p>
           <h1>{hero.title}</h1>
           <div className={styles.rule} />
           <p className={styles.heroSub}>{hero.sub}</p>
@@ -51,8 +51,8 @@ export default function Design1() {
 
       <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(15, 42, 74, 0.62), rgba(15, 42, 74, 0.62)), url(${images.ladyJustice.src})` }}>
         <div className={styles.parallaxInner}>
-          <h2>Your future, in two countries.</h2>
-          <p>UK and US immigration, from one Chennai office.</p>
+          <h2>Your future in the UK, carefully considered.</h2>
+          <p>UK immigration advice, from our Chennai office.</p>
           <a href="/design-1/contact">Book a consultation →</a>
         </div>
       </section>
@@ -114,11 +114,11 @@ export default function Design1() {
       </section>
 
       <section className={styles.section}>
-        <p className={styles.eyebrow}>Where our clients go</p>
-        <h2>From Chennai to America</h2>
+        <p className={styles.eyebrow}>How we work</p>
+        <h2>A clear process from first call to next steps</h2>
         <div className={styles.strip}>
           {destinations.map((d) => (
-            <a key={d.place} href={d.maps} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
+            <a key={d.place} href="/design-1/contact" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
               <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
               <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
             </figure></a>

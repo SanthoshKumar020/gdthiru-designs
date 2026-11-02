@@ -4,11 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./design.module.css";
+import OfficialLogo from "../components/OfficialLogo";
 import { firm, routeSections } from "../content";
 
 const base = "/design-1";
 const ukVisas = routeSections.filter((r) => r.group === "UK" && r.slug !== "appeals" && r.slug !== "judicial-review");
-const usVisas = routeSections.filter((r) => r.group === "US");
 const challenges = routeSections.filter((r) => r.slug === "appeals" || r.slug === "judicial-review");
 
 export default function Nav() {
@@ -42,14 +42,6 @@ export default function Nav() {
             ))}
           </div>
         </div>
-      </div>
-      <div className="dropGroup">
-        <h4>US visas</h4>
-        {usVisas.map((r) => (
-          <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setDropOpen(false)}>
-            {r.title}
-          </Link>
-        ))}
       </div>
       <div className="dropGroup">
         <h4>Challenges</h4>
@@ -90,19 +82,6 @@ export default function Nav() {
         {accOpen === "uk" && (
           <div className="accPanel">
             {ukVisas.map((r) => (
-              <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setOpen(false)}>
-                {r.title}
-              </Link>
-            ))}
-          </div>
-        )}
-        <button type="button" className="accBtn" aria-expanded={accOpen === "us"} onClick={() => setAccOpen(accOpen === "us" ? null : "us")}>
-          <span>US visas</span>
-          <span>{accOpen === "us" ? "−" : "+"}</span>
-        </button>
-        {accOpen === "us" && (
-          <div className="accPanel">
-            {usVisas.map((r) => (
               <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setOpen(false)}>
                 {r.title}
               </Link>
@@ -154,13 +133,7 @@ export default function Nav() {
         <a href={firm.phoneLink}>{firm.phoneDisplay}</a>
       </div>
       <header className={`${styles.header} menuAnchor`}>
-        <Link className={styles.brand} href="/design-1" style={{ textDecoration: "none", color: "inherit" }}>
-          <span className={styles.monogram}>GT</span>
-          <span>
-            <strong>{firm.name}</strong>
-            <small>{firm.tagline}</small>
-          </span>
-        </Link>
+        <OfficialLogo href="/design-1" design="1" />
         <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           {open ? "✕" : "☰"}
         </button>

@@ -1,7 +1,7 @@
 import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
-import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations, usAreas } from "../content";
+import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
 import { Marquee } from "../components/ui/marquee";
 import SafeImg from "../components/SafeImg";
 
@@ -33,7 +33,7 @@ export default function Design2() {
       </section>
 
       <Marquee className="bg-[#1d4ed8] py-3.5 text-white">
-        {[...practiceAreas, ...usAreas].map((a) => (
+        {practiceAreas.map((a) => (
           <span key={a.title} className="whitespace-nowrap font-semibold pr-10">
             {a.title} ✦
           </span>
@@ -60,10 +60,10 @@ export default function Design2() {
         </div>
       </section>
 
-      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url(${images.nycSkyline.src})` }}>
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url(${images.ladyJustice.src})` }}>
         <div className={styles.parallaxInner}>
-          <h2>One firm. Two countries. One clear plan.</h2>
-          <p>From Chennai to New York and London — your case, handled properly.</p>
+          <h2>One firm. One clear plan.</h2>
+          <p>UK immigration advice, handled carefully from our Chennai office.</p>
           <a href="/design-2/contact">Book a consultation →</a>
         </div>
       </section>
@@ -125,11 +125,11 @@ export default function Design2() {
       </section>
 
       <section className={styles.section}>
-        <p className={styles.eyebrow}>Where our clients go</p>
-        <h2>From Chennai to America</h2>
+        <p className={styles.eyebrow}>A considered process</p>
+        <h2>One clear step at a time</h2>
         <div className={styles.strip}>
           {destinations.map((d) => (
-            <a key={d.place} href={d.maps} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
+            <a key={d.place} href="/design-2/contact" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
               <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
               <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
             </figure></a>

@@ -59,7 +59,7 @@ export default function Design3() {
         <p className={styles.more}>{moreAreas}</p>
       </section>
 
-      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(10, 11, 13, 0.62), rgba(10, 11, 13, 0.62)), url(${images.statueOfLiberty.src})` }}>
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(10, 11, 13, 0.62), rgba(10, 11, 13, 0.62)), url(${images.supremeCourt.src})` }}>
         <div className={styles.parallaxInner}>
           <h2>Quiet confidence, careful work.</h2>
           <p>Your case deserves a firm that prepares, not one that promises.</p>
@@ -124,11 +124,11 @@ export default function Design3() {
       </section>
 
       <section className={styles.section}>
-        <p className={styles.eyebrow}>Where our clients go</p>
-        <h2>From Chennai to America</h2>
+        <p className={styles.eyebrow}>A considered process</p>
+        <h2>Careful work, from the first conversation</h2>
         <div className={styles.strip}>
           {destinations.map((d) => (
-            <a key={d.place} href={d.maps} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
+            <a key={d.place} href="/design-3/contact" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
               <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
               <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
             </figure></a>

@@ -1,36 +1,10 @@
 import styles from "../design.module.css";
 import Nav from "../Nav";
 import Footer from "../Footer";
-import { firm, faqs, extraFaqs } from "../../content";
+import { FirmFaq } from "../../components/FirmPages";
 
-export const metadata = { title: "FAQ | GD Thiru & Co." };
+export const metadata = { title: "Frequently Asked Questions | GD Thiru & Co." };
 
 export default function Faq() {
-  const all = [...faqs, ...extraFaqs];
-  return (
-    <div className={styles.page}>
-      <Nav />
-      <section className={styles.pageHero}>
-        <h1>Common Questions</h1>
-        <p>Straight answers before you call. Anything else — just ask us directly.</p>
-      </section>
-      <section className={styles.section}>
-        <div className={styles.faqs}>
-          {all.map((f) => (
-            <article key={f.q}>
-              <h3>{f.q}</h3>
-              <p>{f.a}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className={styles.cta}>
-        <h2>Still have a question?</h2>
-        <p>{firm.address}</p>
-        <p>{firm.hours}</p>
-        <a className={styles.btnWhite} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
-      </section>
-      <Footer />
-    </div>
-  );
+  return <div className={styles.page}><Nav /><FirmFaq design="4" /><Footer /></div>;
 }

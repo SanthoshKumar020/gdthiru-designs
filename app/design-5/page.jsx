@@ -13,11 +13,11 @@ export default function Design5() {
       <Nav />
 
       <section className={styles.hero}>
-        <p className={styles.kicker}>Immigration Law — United Kingdom · United States</p>
+        <p className={styles.kicker}>Immigration Law — United Kingdom</p>
         <h1 className="heroTextAnim">{hero.title}</h1>
         <figure className={`${styles.heroFigure} imgHover`}>
-          <SafeImg className="heroImgAnim" src={images.nycSkyline.src} alt={images.nycSkyline.alt} />
-          <figcaption>New York City — where many of our clients begin their American story.</figcaption>
+          <SafeImg className="heroImgAnim" src={images.supremeCourt.src} alt={images.supremeCourt.alt} />
+          <figcaption>Immigration advice, grounded in careful preparation.</figcaption>
         </figure>
         <div className={styles.heroRow}>
           <p>{hero.sub}</p>
@@ -124,10 +124,10 @@ export default function Design5() {
 
       <section className={styles.section}>
         <p className={styles.secNum}>06</p>
-        <h2>Where Our Clients Go</h2>
+        <h2>How We Work</h2>
         <div className={styles.strip}>
           {destinations.map((d) => (
-            <a key={d.place} href={d.maps} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
+            <a key={d.place} href="/design-5/contact" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
               <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
               <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
             </figure></a>

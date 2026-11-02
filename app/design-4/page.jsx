@@ -22,7 +22,7 @@ export default function Design4() {
       <Nav />
 
       <section className={styles.hero}>
-        <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.statueOfLiberty.src} alt={images.statueOfLiberty.alt} />
+        <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.ladyJustice.src} alt={images.ladyJustice.alt} />
         <div className={styles.heroOverlay} />
         <div className={`${styles.heroInner} heroTextAnim`}>
           <h1>{hero.title}</h1>
@@ -43,7 +43,7 @@ export default function Design4() {
 
       <section id="practice" className={styles.section}>
         <h2>Visa routes we handle</h2>
-        <p className={styles.sectionSub}>UK and US routes, explained in plain language at your consultation.</p>
+        <p className={styles.sectionSub}>UK routes, explained in plain language at your consultation.</p>
         <div className={styles.cards}>
           {practiceAreas.map((p) => (
             <article key={p.title} className={styles.card}>
@@ -59,7 +59,7 @@ export default function Design4() {
 
       <EnquiryBar />
 
-      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.6), rgba(30, 64, 175, 0.6)), url(${images.goldenGate.src})` }}>
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.6), rgba(30, 64, 175, 0.6)), url(${images.reviewingPapers.src})` }}>
         <div className={styles.parallaxInner}>
           <h2>Questions about your visa? Talk to the firm directly.</h2>
           <p>No call centres. No waiting. Your case, your lawyer.</p>
@@ -124,11 +124,11 @@ export default function Design4() {
       </section>
 
       <section className={styles.section}>
-        <h2>Where our clients go</h2>
-        <p className={styles.sectionSub}>From Chennai to America — the destinations our clients dream about.</p>
+        <h2>How we guide each case</h2>
+        <p className={styles.sectionSub}>Understand the facts, make a plan and stay informed through each stage.</p>
         <div className={styles.strip}>
           {destinations.map((d) => (
-            <a key={d.place} href={d.maps} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
+            <a key={d.place} href="/design-4/contact" style={{ textDecoration: "none", color: "inherit" }}><figure className="imgHover">
               <SafeImg src={images[d.img].src} alt={images[d.img].alt} loading="lazy" />
               <figcaption><strong>{d.place}</strong><span>{d.note}</span></figcaption>
             </figure></a>
