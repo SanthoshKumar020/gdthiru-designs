@@ -150,7 +150,7 @@ export default function Nav() {
           {firm.name}
         </Link>
         <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-          {open ? "✕" : "Menu ☰"}
+          {open ? "✕" : "☰"}
         </button>
         <nav className={styles.nav}>
           <Link href="/design-3" className={pathname === "/design-3" ? styles.active : ""}>

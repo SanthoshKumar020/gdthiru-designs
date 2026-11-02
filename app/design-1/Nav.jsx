@@ -162,7 +162,7 @@ export default function Nav() {
           </span>
         </Link>
         <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-          {open ? "✕" : "Menu ☰"}
+          {open ? "✕" : "☰"}
         </button>
         <nav className={styles.nav}>
           <Link href="/design-1" className={pathname === "/design-1" ? styles.active : ""}>

@@ -622,3 +622,18 @@
     padding: 5px 10px;
   }
 }
+
+/* v11.6: flex-page width fix — layout blocks span full width (no narrow columns) */
+.page > section,
+.page > header,
+.page > footer,
+.page > div {
+  width: 100%;
+}
+/* v11.6: tagline slimmer on narrow phones so brand + icon fit one row */
+@media (max-width: 520px) {
+  .brand small {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}

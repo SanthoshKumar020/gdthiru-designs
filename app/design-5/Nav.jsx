@@ -155,7 +155,7 @@ export default function Nav() {
             {firm.phoneDisplay}
           </a>
           <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-            {open ? "✕" : "Menu ☰"}
+            {open ? "✕" : "☰"}
           </button>
         </span>
       </header>

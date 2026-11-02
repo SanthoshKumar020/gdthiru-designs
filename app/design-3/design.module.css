@@ -553,3 +553,11 @@
 .footer {
   margin-top: auto;
 }
+
+/* v11.6: flex-page width fix — layout blocks span full width (no narrow columns) */
+.page > section,
+.page > header,
+.page > footer,
+.page > div {
+  width: 100%;
+}

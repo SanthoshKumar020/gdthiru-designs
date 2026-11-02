@@ -151,7 +151,7 @@ export default function Nav() {
           {firm.name} <small>{firm.tagline}</small>
         </Link>
         <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-          {open ? "✕" : "Menu ☰"}
+          {open ? "✕" : "☰"}
         </button>
         <a className={styles.headerCall} href={firm.phoneLink}>
           📞 {firm.phoneDisplay}
