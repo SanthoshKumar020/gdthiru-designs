@@ -9,6 +9,7 @@ import { firm, routeSections } from "../content";
 
 const base = "/design-5";
 const ukVisas = routeSections.filter((r) => r.group === "UK" && r.slug !== "appeals" && r.slug !== "judicial-review");
+const usVisas = routeSections.filter((r) => r.group === "US");
 const challenges = routeSections.filter((r) => r.slug === "appeals" || r.slug === "judicial-review");
 
 export default function Nav() {
@@ -43,6 +44,16 @@ export default function Nav() {
           </div>
         </div>
       </div>
+      {usVisas.length > 0 && (
+      <div className="dropGroup">
+        <h4>US visas</h4>
+        {usVisas.map((r) => (
+          <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setDropOpen(false)}>
+            {r.title}
+          </Link>
+        ))}
+      </div>
+      )}
       <div className="dropGroup">
         <h4>Challenges</h4>
         {challenges.map((r) => (
@@ -61,7 +72,7 @@ export default function Nav() {
   );
 
   const overlay = open && (
-    <div className="overlay" style={{ "--m-bg": "#fdfbf7", "--m-fg": "#1a1a1a", "--m-acc": "#8a6d1b", "--m-callfg": "#ffffff" }}>
+    <div className="overlay" style={{ "--m-bg": "#fff8f0", "--m-fg": "#2b2118", "--m-acc": "#c2410c", "--m-callfg": "#ffffff" }}>
       <div className="overlayTop">
         <span className="overlayBrand">{firm.name}</span>
         <button type="button" className="overlayClose" aria-label="Close menu" onClick={() => setOpen(false)}>
@@ -87,6 +98,23 @@ export default function Nav() {
               </Link>
             ))}
           </div>
+        )}
+        {usVisas.length > 0 && (
+          <>
+        <button type="button" className="accBtn" aria-expanded={accOpen === "us"} onClick={() => setAccOpen(accOpen === "us" ? null : "us")}>
+          <span>US visas</span>
+          <span>{accOpen === "us" ? "−" : "+"}</span>
+        </button>
+        {accOpen === "us" && (
+          <div className="accPanel">
+            {usVisas.map((r) => (
+              <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setOpen(false)}>
+                {r.title}
+              </Link>
+            ))}
+          </div>
+        )}
+          </>
         )}
         <button type="button" className="accBtn" aria-expanded={accOpen === "ch"} onClick={() => setAccOpen(accOpen === "ch" ? null : "ch")}>
           <span>Challenges</span>

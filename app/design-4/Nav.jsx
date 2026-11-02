@@ -9,6 +9,7 @@ import { firm, routeSections } from "../content";
 
 const base = "/design-4";
 const ukVisas = routeSections.filter((r) => r.group === "UK" && r.slug !== "appeals" && r.slug !== "judicial-review");
+const usVisas = routeSections.filter((r) => r.group === "US");
 const challenges = routeSections.filter((r) => r.slug === "appeals" || r.slug === "judicial-review");
 
 export default function Nav() {
@@ -18,7 +19,7 @@ export default function Nav() {
   const pathname = usePathname();
   const onPractice = pathname.startsWith(`${base}/practice-areas`);
   const dropBtnStyle = {
-    color: "#dbeafe",
+    color: "#f0ead8",
     ...(onPractice ? { fontWeight: "bold", textDecoration: "underline", textUnderlineOffset: "4px" } : {}),
   };
 
@@ -44,6 +45,16 @@ export default function Nav() {
           </div>
         </div>
       </div>
+      {usVisas.length > 0 && (
+      <div className="dropGroup">
+        <h4>US visas</h4>
+        {usVisas.map((r) => (
+          <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setDropOpen(false)}>
+            {r.title}
+          </Link>
+        ))}
+      </div>
+      )}
       <div className="dropGroup">
         <h4>Challenges</h4>
         {challenges.map((r) => (
@@ -62,7 +73,7 @@ export default function Nav() {
   );
 
   const overlay = open && (
-    <div className="overlay" style={{ "--m-bg": "#ffffff", "--m-fg": "#1e3a5f", "--m-acc": "#f59e0b", "--m-callfg": "#1e3a5f" }}>
+    <div className="overlay" style={{ "--m-bg": "#fdf8ef", "--m-fg": "#064e3b", "--m-acc": "#d97706", "--m-callfg": "#ffffff" }}>
       <div className="overlayTop">
         <span className="overlayBrand">{firm.name}</span>
         <button type="button" className="overlayClose" aria-label="Close menu" onClick={() => setOpen(false)}>
@@ -88,6 +99,23 @@ export default function Nav() {
               </Link>
             ))}
           </div>
+        )}
+        {usVisas.length > 0 && (
+          <>
+        <button type="button" className="accBtn" aria-expanded={accOpen === "us"} onClick={() => setAccOpen(accOpen === "us" ? null : "us")}>
+          <span>US visas</span>
+          <span>{accOpen === "us" ? "−" : "+"}</span>
+        </button>
+        {accOpen === "us" && (
+          <div className="accPanel">
+            {usVisas.map((r) => (
+              <Link key={r.slug} href={`${base}/practice-areas#${r.slug}`} onClick={() => setOpen(false)}>
+                {r.title}
+              </Link>
+            ))}
+          </div>
+        )}
+          </>
         )}
         <button type="button" className="accBtn" aria-expanded={accOpen === "ch"} onClick={() => setAccOpen(accOpen === "ch" ? null : "ch")}>
           <span>Challenges</span>
