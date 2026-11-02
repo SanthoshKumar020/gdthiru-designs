@@ -52,7 +52,7 @@ export default function PracticeAreas() {
                   <li key={i}>{pt}</li>
                 ))}
               </ul>
-              <a href={firm.phoneLink} style={{ color: "#1e40af", fontWeight: "bold" }}>
+              <a href={firm.phoneLink} style={{ color: "#047857", fontWeight: "bold" }}>
                 Book a consultation about this route →
               </a>
             </article>
@@ -78,7 +78,7 @@ export default function PracticeAreas() {
                   <li key={i}>{pt}</li>
                 ))}
               </ul>
-              <a href={firm.phoneLink} style={{ color: "#1e40af", fontWeight: "bold" }}>
+              <a href={firm.phoneLink} style={{ color: "#047857", fontWeight: "bold" }}>
                 Book a consultation about this route →
               </a>
             </article>

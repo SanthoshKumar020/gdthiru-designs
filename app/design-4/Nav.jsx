@@ -18,7 +18,7 @@ export default function Nav() {
   const pathname = usePathname();
   const onPractice = pathname.startsWith(`${base}/practice-areas`);
   const dropBtnStyle = {
-    color: "#dbeafe",
+    color: "#f0ead8",
     ...(onPractice ? { fontWeight: "bold", textDecoration: "underline", textUnderlineOffset: "4px" } : {}),
   };
 
@@ -70,7 +70,7 @@ export default function Nav() {
   );
 
   const overlay = open && (
-    <div className="overlay" style={{ "--m-bg": "#ffffff", "--m-fg": "#1e3a5f", "--m-acc": "#f59e0b", "--m-callfg": "#1e3a5f" }}>
+    <div className="overlay" style={{ "--m-bg": "#fdf8ef", "--m-fg": "#064e3b", "--m-acc": "#d97706", "--m-callfg": "#ffffff" }}>
       <div className="overlayTop">
         <span className="overlayBrand">{firm.name}</span>
         <button type="button" className="overlayClose" aria-label="Close menu" onClick={() => setOpen(false)}>
@@ -148,7 +148,10 @@ export default function Nav() {
     <>
       <header className={styles.header}>
         <Link className={styles.brand} href="/design-4" style={{ textDecoration: "none", color: "inherit" }}>
-          {firm.name} <small>{firm.tagline}</small>
+          <span className={styles.monogram}>G</span>
+          <span>
+            {firm.name} <small>{firm.tagline}</small>
+          </span>
         </Link>
         <button type="button" className={styles.hamburger} aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           {open ? "✕" : "☰"}

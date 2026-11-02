@@ -2,10 +2,9 @@ import styles from "./design.module.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { firm, hero, practiceAreas, moreAreas, whyUs, steps, testimonials, faqs, images, destinations } from "../content";
-import { BlurFade } from "../components/ui/blur-fade";
 import SafeImg from "../components/SafeImg";
 
-export const metadata = { title: "Design 5 — Editorial | GD Thiru & Co." };
+export const metadata = { title: "Design 5 — Terracotta | GD Thiru & Co." };
 
 export default function Design5() {
   return (
@@ -13,22 +12,22 @@ export default function Design5() {
       <Nav />
 
       <section className={styles.hero}>
-        <p className={styles.kicker}>Immigration Law — United Kingdom · United States</p>
-        <h1 className="heroTextAnim">{hero.title}</h1>
-        <figure className={`${styles.heroFigure} imgHover`}>
-          <SafeImg className="heroImgAnim" src={images.nycSkyline.src} alt={images.nycSkyline.alt} />
-          <figcaption>New York City — where many of our clients begin their American story.</figcaption>
-        </figure>
-        <div className={styles.heroRow}>
+        <SafeImg className={`${styles.heroImg} heroImgAnim`} src={images.nycSkyline.src} alt={images.nycSkyline.alt} />
+        <div className={styles.heroOverlay} />
+        <div className={styles.heroInner}>
+          <p className={styles.heroKicker}>Immigration Law — United Kingdom · United States</p>
+          <h1>{hero.title}</h1>
           <p>{hero.sub}</p>
-          <div>
-            <a className={styles.btnDark} href="#contact">{hero.cta}</a>
-            <p className={styles.heroMeta}>{firm.hours}<br />{firm.address}</p>
+          <div className={styles.heroCtas}>
+            <a className={styles.btnPrimary} href="#contact">{hero.cta}</a>
+            <a className={styles.btnOutline} href={firm.phoneLink}>Call {firm.phoneDisplay}</a>
           </div>
+          <div className={styles.heroBadges}>
+            {firm.badges.map((b) => <span key={b}>{b}</span>)}
+          </div>
+          <p className={styles.heroMeta}>{firm.hours}<br />{firm.address}</p>
         </div>
       </section>
-
-
 
       <section id="practice" className={styles.section}>
         <p className={styles.secNum}>01</p>
@@ -47,7 +46,7 @@ export default function Design5() {
         <p className={styles.more}>{moreAreas}</p>
       </section>
 
-      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.6)), url(${images.supremeCourt.src})` }}>
+      <section className={styles.parallax} style={{ backgroundImage: `linear-gradient(rgba(43, 33, 24, 0.72), rgba(154, 52, 18, 0.55)), url(${images.supremeCourt.src})` }}>
         <div className={styles.parallaxInner}>
           <h2>The law, in plain language.</h2>
           <p>Complicated rules, explained simply — and handled properly.</p>
@@ -58,12 +57,10 @@ export default function Design5() {
       <section id="why" className={styles.section}>
         <p className={styles.secNum}>02</p>
         <h2>The Firm</h2>
-        <BlurFade delay={0.25} yOffset={8} blur="8px">
-          <p className={styles.standfirst}>
-            A Chennai law firm practising immigration law — regulated, plain-spoken, and careful
-            with the details that decide cases.
-          </p>
-        </BlurFade>
+        <p className={styles.standfirst}>
+          A Chennai law firm practising immigration law — regulated, plain-spoken, and careful
+          with the details that decide cases.
+        </p>
         <div className={styles.whyGrid}>
           {whyUs.map((w) => (
             <article key={w.title}>
@@ -95,13 +92,13 @@ export default function Design5() {
         <div className={styles.quotes}>
           <div className={styles.quoteFeature}>
             <div className={styles.quoteImg}>
-              <img src={images.lawyerClient.src} alt={images.lawyerClient.alt} loading="lazy" width="800" height="600" />
+              <SafeImg src={images.lawyerClient.src} alt={images.lawyerClient.alt} loading="lazy" width="800" height="600" />
             </div>
             <blockquote>
               <p>“{testimonials[0].quote}”</p>
               <cite>{testimonials[0].who}</cite>
               <p style={{ fontSize: 13, opacity: 0.8 }}>{firm.badges.join(" • ")}</p>
-              <a href={firm.phoneLink} style={{ color: "#1a1a1a", fontWeight: "bold" }}>
+              <a href={firm.phoneLink} style={{ color: "#c2410c", fontWeight: "bold" }}>
                 Book a consultation →
               </a>
             </blockquote>
@@ -136,7 +133,7 @@ export default function Design5() {
       </section>
 
       <section id="contact" className={styles.closing}>
-        <p className={styles.secNum}>07</p>
+        <p className={styles.secNum}>Next step</p>
         <h2>Start with a consultation.</h2>
         <p>{firm.address}</p>
         <p>{firm.hours}</p>

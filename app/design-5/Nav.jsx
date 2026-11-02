@@ -69,7 +69,7 @@ export default function Nav() {
   );
 
   const overlay = open && (
-    <div className="overlay" style={{ "--m-bg": "#fdfbf7", "--m-fg": "#1a1a1a", "--m-acc": "#8a6d1b", "--m-callfg": "#ffffff" }}>
+    <div className="overlay" style={{ "--m-bg": "#fff8f0", "--m-fg": "#2b2118", "--m-acc": "#c2410c", "--m-callfg": "#ffffff" }}>
       <div className="overlayTop">
         <span className="overlayBrand">{firm.name}</span>
         <button type="button" className="overlayClose" aria-label="Close menu" onClick={() => setOpen(false)}>
