@@ -6,8 +6,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  padding: 20px 5vw;
+  align-items: center;
+  padding: 10px 5vw;
   border-bottom: 1px solid #1a1a1a;
   font-size: 14px;
 }
